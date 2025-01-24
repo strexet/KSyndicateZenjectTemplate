@@ -1,4 +1,5 @@
 ﻿using CodeBase.Infrastructure.States;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
@@ -23,7 +24,7 @@ namespace CodeBase.Infrastructure
             gameStateMachine.RegisterState(statesFactory.Create<GameHubState>());
             gameStateMachine.RegisterState(statesFactory.Create<GameplayState>());
             
-            gameStateMachine.Enter<GameBootstrapState>();
+            gameStateMachine.Enter<GameBootstrapState>().Forget();
 
             DontDestroyOnLoad(this);
         }

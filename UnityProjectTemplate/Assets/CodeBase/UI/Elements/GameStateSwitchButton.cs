@@ -1,5 +1,6 @@
 ﻿using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
@@ -39,9 +40,9 @@ namespace CodeBase.UI.Elements
         {
             switch (targetState)
             {
-                case TargetStates.Loading: gameStateMachine.Enter<GameLoadingState>(); break;
-                case TargetStates.GameHub: gameStateMachine.Enter<GameHubState>(); break;
-                case TargetStates.Gameplay: gameStateMachine.Enter<GameplayState>(); break;
+                case TargetStates.Loading: gameStateMachine.Enter<GameLoadingState>().Forget(); break;
+                case TargetStates.GameHub: gameStateMachine.Enter<GameHubState>().Forget(); break;
+                case TargetStates.Gameplay: gameStateMachine.Enter<GameplayState>().Forget(); break;
                 default: log.LogError("Not valid option"); break;
             }
         }

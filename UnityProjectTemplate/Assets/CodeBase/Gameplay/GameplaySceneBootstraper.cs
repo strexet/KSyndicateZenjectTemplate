@@ -1,6 +1,7 @@
 using CodeBase.Gameplay.States;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
+using Cysharp.Threading.Tasks;
 using Zenject;
 
 namespace CodeBase.Gameplay
@@ -31,7 +32,7 @@ namespace CodeBase.Gameplay
             log.Log("Finish game mode scene bootstraping");
             
             // go to the first scene state
-            sceneStateMachine.Enter<StartGameplayState>();
+            sceneStateMachine.Enter<StartGameplayState>().Forget();
         }
     }
 }

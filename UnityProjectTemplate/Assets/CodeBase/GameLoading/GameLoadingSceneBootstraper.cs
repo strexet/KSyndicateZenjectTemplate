@@ -1,6 +1,7 @@
 ﻿using CodeBase.GameLoading.States;
 using CodeBase.Infrastructure.States;
 using CodeBase.Services.LogService;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
@@ -32,7 +33,7 @@ namespace CodeBase.GameLoading
             log.Log("Finish loading scene bootstraping");
             
             // go to the first scene state
-            sceneStateMachine.Enter<ServerConnectState>();
+            sceneStateMachine.Enter<ServerConnectState>().Forget();
         }
     }
 }
