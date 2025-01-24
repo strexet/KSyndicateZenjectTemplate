@@ -10,8 +10,8 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
-Assets/StreamingAssets/build_info
-Assets/StreamingAssets/build_info.meta
+/Assets/StreamingAssets/build_info
+/Assets/StreamingAssets/build_info.meta
 
 # Unity 2020.2+ generated files
 /UserSettings

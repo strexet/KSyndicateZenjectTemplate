@@ -1,9 +1,6 @@
-# =============== #
-# Unity generated #
-# =============== #
-[Tt]emp/
-[Ll]ibrary/
-[Ll]ogs/
+# Unity generated
+*build_info
+*build_info.meta
 
 # Rider cache directory
 .idea/
