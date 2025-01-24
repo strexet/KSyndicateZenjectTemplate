@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea8791ba-f3e2-4bbc-9045-b1f96d0a71a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityProjectTemplate/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/CompositionRoot/GameInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Data/PlayerProgress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Gameplay/GameplaySceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Gameplay/GameplaySceneInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/GameBootstrapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameplayState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameMode1State.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/Infrastructure/States/GameplayState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/GameStateSwitchButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CodeBase/UI/Elements/GameStateSwitchButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/GameHubCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/GameHubCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UnityProjectTemplate.sln" beforeDir="false" afterPath="$PROJECT_DIR$/UnityProjectTemplate.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2022.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-IntegrationTests-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-IntegrationTests-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-IntegrationTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-IntegrationTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-PoolMonitor-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-PoolMonitor-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-ReflectionBaking-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-ReflectionBaking-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-TestFramework.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-TestFramework.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject-UnitTests-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject-UnitTests-Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Zenject.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Zenject.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,26 +50,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\s_stolnikov\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\s_stolnikov\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\s_stolnikov\\AppData\\Local\\Symbols\\src&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.9f1\Editor\Unity.exe" />
@@ -97,6 +95,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -107,6 +108,9 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
@@ -134,6 +138,7 @@
       <workItem from="1697645185327" duration="244000" />
       <workItem from="1697823502341" duration="561000" />
       <workItem from="1697824197352" duration="65000" />
+      <workItem from="1737710295322" duration="14000" />
     </task>
     <servers />
   </component>
@@ -142,6 +147,10 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -163,27 +172,13 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/Infrastructure/AssetManagement/AssetProvider.cs</url>
           <line>71</line>
-          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\AssetManagement\AssetProvider.cs" initialLine="71" containingFunctionPresentation="method 'ReleaseAssetsByLabel'">
-            <startOffsets>
-              <option value="2433" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2484" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\Infrastructure\AssetManagement\AssetProvider.cs" containingFunctionPresentation="method 'ReleaseAssetsByLabel'" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/CodeBase/GameLoading/States/LoadPlayerProgressState.cs</url>
           <line>38</line>
-          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\GameLoading\States\LoadPlayerProgressState.cs" initialLine="37" containingFunctionPresentation="Method 'Enter'">
-            <startOffsets>
-              <option value="1589" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1628" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\git\KSyndicateZenjectTemplate\UnityProjectTemplate\Assets\CodeBase\GameLoading\States\LoadPlayerProgressState.cs" containingFunctionPresentation="Method 'Enter'" />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
