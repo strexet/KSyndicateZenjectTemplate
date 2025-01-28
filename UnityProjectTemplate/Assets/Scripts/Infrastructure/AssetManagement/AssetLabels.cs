@@ -1,4 +1,4 @@
-namespace CodeBase.Infrastructure.AssetManagement
+namespace Game.Infrastructure.AssetManagement
 {
 	public static class AssetLabels
 	{

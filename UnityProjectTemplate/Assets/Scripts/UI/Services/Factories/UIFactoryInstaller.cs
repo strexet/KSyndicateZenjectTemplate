@@ -1,10 +1,10 @@
-using CodeBase.Infrastructure.AssetManagement;
-using CodeBase.UI.PopUps.ErrorPopup;
-using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using Cysharp.Threading.Tasks;
+using Game.Infrastructure.AssetManagement;
+using Game.UI.PopUps.ErrorPopup;
+using Game.UI.PopUps.PolicyAcceptPopup;
 using Zenject;
 
-namespace CodeBase.UI.Services.Factories
+namespace Game.UI.Services.Factories
 {
 	/// <summary>
 	///     Bind ui factories here

@@ -1,6 +1,6 @@
-﻿using CodeBase.UI.HUD;
+﻿using Game.UI.HUD;
 
-namespace CodeBase.Infrastructure.Factories
+namespace Game.Infrastructure.Factories
 {
 	public interface IGameFactory
 	{

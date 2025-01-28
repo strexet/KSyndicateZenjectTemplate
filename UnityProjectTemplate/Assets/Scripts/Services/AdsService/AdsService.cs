@@ -1,7 +1,7 @@
-﻿using CodeBase.Services.LogService;
+﻿using Game.Services.LogService;
 using System;
 
-namespace CodeBase.Services.AdsService
+namespace Game.Services.AdsService
 {
 	public class AdsService : IAdsService
 	{

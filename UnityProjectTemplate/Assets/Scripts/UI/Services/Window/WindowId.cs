@@ -1,4 +1,4 @@
-﻿namespace CodeBase.UI.Services.Window
+﻿namespace Game.UI.Services.Window
 {
 	public enum WindowId
 	{

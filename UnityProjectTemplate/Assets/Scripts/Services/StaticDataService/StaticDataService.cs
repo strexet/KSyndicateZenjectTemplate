@@ -1,12 +1,12 @@
-﻿using CodeBase.Infrastructure.AssetManagement;
-using CodeBase.Services.LogService;
-using CodeBase.Services.ServerConnectionService;
-using CodeBase.UI.PopUps.PolicyAcceptPopup;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.AssetManagement;
+using Game.Services.LogService;
+using Game.Services.ServerConnectionService;
+using Game.UI.PopUps.PolicyAcceptPopup;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CodeBase.Services.StaticDataService
+namespace Game.Services.StaticDataService
 {
 	// This service incapsulate logic of uploading configs and give convenient API
 	// for all consumers to receive necessary configs

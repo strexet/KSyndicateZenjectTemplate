@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Services.LogService
+﻿namespace Game.Services.LogService
 {
 	public interface ILogService
 	{

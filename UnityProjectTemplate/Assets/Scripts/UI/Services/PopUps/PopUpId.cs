@@ -1,4 +1,4 @@
-﻿namespace CodeBase.UI.Services.PopUps
+﻿namespace Game.UI.Services.PopUps
 {
 	public enum PopUpId
 	{

@@ -1,10 +1,10 @@
-﻿using CodeBase.Data;
-using CodeBase.Services.PlayerProgressService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Data;
+using Game.Services.PlayerProgressService;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.UI.PopUps
+namespace Game.UI.PopUps
 {
 	public abstract class PopUpBase<TResult, TInitializeData> : MonoBehaviour
 	{

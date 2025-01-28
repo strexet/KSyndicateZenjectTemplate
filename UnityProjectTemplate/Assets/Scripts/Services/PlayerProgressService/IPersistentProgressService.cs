@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Services.PlayerProgressService
+﻿namespace Game.Services.PlayerProgressService
 {
 	public interface IPersistentProgressService
 	{

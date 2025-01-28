@@ -1,13 +1,13 @@
-﻿using CodeBase.Infrastructure.AssetManagement;
-using CodeBase.Infrastructure.UI.LoadingCurtain;
-using CodeBase.Services.AdsService;
-using CodeBase.Services.AnalyticsService;
-using CodeBase.Services.LogService;
-using CodeBase.Services.StaticDataService;
-using CodeBase.UI.Overlays;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.AssetManagement;
+using Game.Infrastructure.UI.AwaitingOverlay;
+using Game.Infrastructure.UI.LoadingCurtain;
+using Game.Services.AdsService;
+using Game.Services.AnalyticsService;
+using Game.Services.LogService;
+using Game.Services.StaticDataService;
 
-namespace CodeBase.Infrastructure.States
+namespace Game.Infrastructure.States
 {
 	public class GameBootstrapState : IState
 	{

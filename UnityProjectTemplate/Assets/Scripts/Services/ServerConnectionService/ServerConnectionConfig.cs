@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.Services.ServerConnectionService
+namespace Game.Services.ServerConnectionService
 {
 	// You can add any necessary information for your specific game into this config.
 	[CreateAssetMenu(menuName = "Configs/Services/ConnectionService")]

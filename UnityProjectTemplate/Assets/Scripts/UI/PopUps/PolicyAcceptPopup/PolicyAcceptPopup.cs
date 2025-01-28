@@ -1,12 +1,12 @@
-﻿using CodeBase.Services.LocalizationService;
-using CodeBase.Services.LogService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Services.LocalizationService;
+using Game.Services.LogService;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace CodeBase.UI.PopUps.PolicyAcceptPopup
+namespace Game.UI.PopUps.PolicyAcceptPopup
 {
 	public class PolicyAcceptPopup : PopUpBase<bool, PolicyAcceptPopupConfig>
 	{

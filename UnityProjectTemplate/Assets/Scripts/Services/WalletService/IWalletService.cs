@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Services.WalletService
+﻿namespace Game.Services.WalletService
 {
 	public interface IWalletService
 	{

@@ -1,6 +1,6 @@
 ﻿using UnityEngine.UI;
 
-namespace CodeBase.UI.Extensions
+namespace Game.UI.Extensions
 {
 	public static class ButtonExtensions
 	{

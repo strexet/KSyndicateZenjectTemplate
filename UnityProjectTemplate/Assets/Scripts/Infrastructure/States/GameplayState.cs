@@ -1,10 +1,10 @@
-﻿using CodeBase.Infrastructure.AssetManagement;
-using CodeBase.Infrastructure.SceneManagement;
-using CodeBase.Infrastructure.UI.LoadingCurtain;
-using CodeBase.Services.LogService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.AssetManagement;
+using Game.Infrastructure.SceneManagement;
+using Game.Infrastructure.UI.LoadingCurtain;
+using Game.Services.LogService;
 
-namespace CodeBase.Infrastructure.States
+namespace Game.Infrastructure.States
 {
 	public class GameplayState : IState
 	{

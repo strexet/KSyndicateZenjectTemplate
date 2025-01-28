@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Infrastructure.States
+namespace Game.Infrastructure.States
 {
 	public interface IStateMachine
 	{

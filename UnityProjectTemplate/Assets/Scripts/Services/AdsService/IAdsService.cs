@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CodeBase.Services.AdsService
+namespace Game.Services.AdsService
 {
 	public interface IAdsService
 	{

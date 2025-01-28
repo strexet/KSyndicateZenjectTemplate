@@ -1,13 +1,13 @@
-﻿using CodeBase.Infrastructure.States;
-using CodeBase.Services.LogService;
-using CodeBase.Services.PlayerProgressService;
-using CodeBase.Services.StaticDataService;
-using CodeBase.UI.PopUps.PolicyAcceptPopup;
-using CodeBase.UI.Services.PopUps;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.States;
+using Game.Services.LogService;
+using Game.Services.PlayerProgressService;
+using Game.Services.StaticDataService;
+using Game.UI.PopUps.PolicyAcceptPopup;
+using Game.UI.Services.PopUps;
 using System.Threading.Tasks;
 
-namespace CodeBase.GameLoading.States
+namespace Game.GameLoading.States
 {
 	public class GDPRState : IState
 	{

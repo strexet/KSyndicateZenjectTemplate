@@ -2,7 +2,7 @@
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Services.PrefabPoolingService
+namespace Game.Services.PrefabPoolingService
 {
 	public sealed class PrefabPoolingService : IPrefabPoolingService
 	{

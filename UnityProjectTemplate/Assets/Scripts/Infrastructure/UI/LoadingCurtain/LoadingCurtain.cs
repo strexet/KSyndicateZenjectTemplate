@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Infrastructure.UI.LoadingCurtain
+namespace Game.Infrastructure.UI.LoadingCurtain
 {
 	public class LoadingCurtain : MonoBehaviour, ILoadingCurtain
 	{

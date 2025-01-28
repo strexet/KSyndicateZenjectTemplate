@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.Services.WalletService
+namespace Game.Services.WalletService
 {
 	[CreateAssetMenu(menuName = "Configs/Wallet/Currency")]
 	public class CurrencyConfig : ScriptableObject

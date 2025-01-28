@@ -1,6 +1,6 @@
-﻿using CodeBase.Services.WalletService;
+﻿using Game.Services.WalletService;
 
-namespace CodeBase.Data
+namespace Game.Data
 {
 	public class PlayerProgress
 	{

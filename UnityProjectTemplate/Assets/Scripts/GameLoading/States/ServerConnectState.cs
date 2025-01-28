@@ -1,12 +1,12 @@
-﻿using CodeBase.Infrastructure.States;
-using CodeBase.Services.LogService;
-using CodeBase.Services.ServerConnectionService;
-using CodeBase.Services.StaticDataService;
-using CodeBase.UI.Overlays;
-using CodeBase.UI.Services.PopUps;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.States;
+using Game.Infrastructure.UI.AwaitingOverlay;
+using Game.Services.LogService;
+using Game.Services.ServerConnectionService;
+using Game.Services.StaticDataService;
+using Game.UI.Services.PopUps;
 
-namespace CodeBase.GameLoading.States
+namespace Game.GameLoading.States
 {
 	public class ServerConnectState : IState
 	{

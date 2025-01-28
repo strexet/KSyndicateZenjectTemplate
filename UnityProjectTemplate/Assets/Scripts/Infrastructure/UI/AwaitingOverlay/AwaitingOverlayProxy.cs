@@ -1,7 +1,6 @@
-using CodeBase.Infrastructure;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.UI.Overlays
+namespace Game.Infrastructure.UI.AwaitingOverlay
 {
 	public class AwaitingOverlayProxy : IAwaitingOverlay
 	{
@@ -15,7 +14,6 @@ namespace CodeBase.UI.Overlays
 
 		public void Hide() => impl.Hide();
 
-		public async UniTask InitializeAsync() =>
-			impl = await factory.Create(InfrastructureAssetPath.AwaitingOverlay);
+		public async UniTask InitializeAsync() => impl = await factory.Create(InfrastructureAssetPath.AwaitingOverlay);
 	}
 }

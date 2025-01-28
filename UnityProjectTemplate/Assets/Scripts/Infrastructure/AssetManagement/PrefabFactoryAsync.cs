@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Infrastructure.AssetManagement
+namespace Game.Infrastructure.AssetManagement
 {
 	public class PrefabFactoryAsync<TComponent> : IFactory<string, UniTask<TComponent>>
 	{

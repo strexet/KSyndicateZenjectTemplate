@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
 
-namespace CodeBase.Infrastructure.AssetManagement
+namespace Game.Infrastructure.AssetManagement
 {
 	public interface IAssetProvider
 	{

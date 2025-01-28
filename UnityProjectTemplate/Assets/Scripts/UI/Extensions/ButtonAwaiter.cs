@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine.UI;
 
-namespace CodeBase.UI.Extensions
+namespace Game.UI.Extensions
 {
 	// implemented by following this guide: https://www.youtube.com/watch?v=U6h6p1tJ7XM
 	public struct ButtonAwaiter : INotifyCompletion

@@ -1,14 +1,14 @@
-﻿using CodeBase.Data;
-using CodeBase.Infrastructure.States;
-using CodeBase.Services.LogService;
-using CodeBase.Services.PlayerProgressService;
-using CodeBase.Services.SaveLoadService;
-using CodeBase.Services.WalletService;
-using CodeBase.UI.Overlays;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Data;
+using Game.Infrastructure.States;
+using Game.Infrastructure.UI.AwaitingOverlay;
+using Game.Services.LogService;
+using Game.Services.PlayerProgressService;
+using Game.Services.SaveLoadService;
+using Game.Services.WalletService;
 using System.Collections.Generic;
 
-namespace CodeBase.GameLoading.States
+namespace Game.GameLoading.States
 {
 	public class LoadPlayerProgressState : IState
 	{

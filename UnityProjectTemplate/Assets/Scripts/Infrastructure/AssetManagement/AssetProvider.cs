@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-namespace CodeBase.Infrastructure.AssetManagement
+namespace Game.Infrastructure.AssetManagement
 {
 	public class AssetProvider : IAssetProvider
 	{

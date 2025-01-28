@@ -1,10 +1,10 @@
-﻿using CodeBase.Services.LocalizationService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Services.LocalizationService;
 using TMPro;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.UI.Overlays
+namespace Game.Infrastructure.UI.AwaitingOverlay
 {
 	public class AwaitingOverlay : MonoBehaviour, IAwaitingOverlay
 	{

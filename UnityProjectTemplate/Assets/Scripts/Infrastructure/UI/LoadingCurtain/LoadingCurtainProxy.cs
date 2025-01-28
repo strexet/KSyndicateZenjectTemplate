@@ -1,6 +1,6 @@
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Infrastructure.UI.LoadingCurtain
+namespace Game.Infrastructure.UI.LoadingCurtain
 {
 	public class LoadingCurtainProxy : ILoadingCurtain
 	{

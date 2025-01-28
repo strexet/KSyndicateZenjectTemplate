@@ -1,10 +1,10 @@
-﻿using CodeBase.Data;
-using CodeBase.Services.PlayerProgressService;
+﻿using Game.Data;
+using Game.Services.PlayerProgressService;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace CodeBase.UI.Windows
+namespace Game.UI.Windows
 {
 	public abstract class WindowBase : MonoBehaviour
 	{

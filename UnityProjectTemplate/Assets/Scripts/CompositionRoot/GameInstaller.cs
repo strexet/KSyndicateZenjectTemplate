@@ -1,25 +1,25 @@
-using CodeBase.Infrastructure;
-using CodeBase.Infrastructure.AssetManagement;
-using CodeBase.Infrastructure.Factories;
-using CodeBase.Infrastructure.SceneManagement;
-using CodeBase.Infrastructure.States;
-using CodeBase.Infrastructure.UI.LoadingCurtain;
-using CodeBase.Services.AdsService;
-using CodeBase.Services.AnalyticsService;
-using CodeBase.Services.InputService;
-using CodeBase.Services.LocalizationService;
-using CodeBase.Services.LogService;
-using CodeBase.Services.PlayerProgressService;
-using CodeBase.Services.RandomizerService;
-using CodeBase.Services.SaveLoadService;
-using CodeBase.Services.ServerConnectionService;
-using CodeBase.Services.StaticDataService;
-using CodeBase.Services.WalletService;
-using CodeBase.UI.Overlays;
 using Cysharp.Threading.Tasks;
+using Game.Infrastructure;
+using Game.Infrastructure.AssetManagement;
+using Game.Infrastructure.Factories;
+using Game.Infrastructure.SceneManagement;
+using Game.Infrastructure.States;
+using Game.Infrastructure.UI.AwaitingOverlay;
+using Game.Infrastructure.UI.LoadingCurtain;
+using Game.Services.AdsService;
+using Game.Services.AnalyticsService;
+using Game.Services.InputService;
+using Game.Services.LocalizationService;
+using Game.Services.LogService;
+using Game.Services.PlayerProgressService;
+using Game.Services.RandomizerService;
+using Game.Services.SaveLoadService;
+using Game.Services.ServerConnectionService;
+using Game.Services.StaticDataService;
+using Game.Services.WalletService;
 using Zenject;
 
-namespace CodeBase.CompositionRoot
+namespace Game.CompositionRoot
 {
 	public class GameInstaller : MonoInstaller
 	{

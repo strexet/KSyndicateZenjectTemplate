@@ -1,7 +1,7 @@
-﻿using CodeBase.UI.PopUps.PolicyAcceptPopup;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.UI.PopUps.PolicyAcceptPopup;
 
-namespace CodeBase.UI.Services.PopUps
+namespace Game.UI.Services.PopUps
 {
 	public interface IPopUpService
 	{

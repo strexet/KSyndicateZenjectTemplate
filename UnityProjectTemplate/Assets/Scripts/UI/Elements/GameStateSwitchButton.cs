@@ -1,11 +1,11 @@
-﻿using CodeBase.Infrastructure.States;
-using CodeBase.Services.LogService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.States;
+using Game.Services.LogService;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace CodeBase.UI.Elements
+namespace Game.UI.Elements
 {
 	public class GameStateSwitchButton : MonoBehaviour
 	{

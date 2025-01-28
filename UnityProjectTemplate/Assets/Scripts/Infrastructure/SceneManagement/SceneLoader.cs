@@ -1,9 +1,9 @@
-﻿using CodeBase.Services.LogService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Services.LogService;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
-namespace CodeBase.Infrastructure.SceneManagement
+namespace Game.Infrastructure.SceneManagement
 {
 	public class SceneLoader : ISceneLoader
 	{

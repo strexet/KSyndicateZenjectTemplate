@@ -1,8 +1,8 @@
-﻿using CodeBase.Data;
+﻿using Game.Data;
 using System;
 using System.Collections.Generic;
 
-namespace CodeBase.Services.WalletService
+namespace Game.Services.WalletService
 {
 	[Serializable]
 	public class WalletsData : DictionarySerializeContainer<int, long>

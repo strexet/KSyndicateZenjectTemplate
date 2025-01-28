@@ -1,8 +1,8 @@
-﻿using CodeBase.Infrastructure.States;
-using CodeBase.Services.LogService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.States;
+using Game.Services.LogService;
 
-namespace CodeBase.GameLoading.States
+namespace Game.GameLoading.States
 {
 	public class FinishGameLoadingState : IState
 	{
@@ -22,7 +22,6 @@ namespace CodeBase.GameLoading.States
 			gameStateMachine.Enter<GameHubState>().Forget();
 		}
 
-		public UniTask Exit() =>
-			default;
+		public UniTask Exit() => default;
 	}
 }

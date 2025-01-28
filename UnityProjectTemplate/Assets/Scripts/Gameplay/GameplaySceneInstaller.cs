@@ -1,10 +1,10 @@
-using CodeBase.Infrastructure.States;
-using CodeBase.Services.PrefabPoolingService;
-using CodeBase.UI;
+using Game.Infrastructure.States;
+using Game.Services.PrefabPoolingService;
+using Game.UI;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Gameplay
+namespace Game.Gameplay
 {
 	public class GameplaySceneInstaller : MonoInstaller
 	{

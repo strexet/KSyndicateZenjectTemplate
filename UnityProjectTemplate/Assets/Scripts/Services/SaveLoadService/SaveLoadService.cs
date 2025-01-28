@@ -1,9 +1,9 @@
-﻿using CodeBase.Data;
-using CodeBase.Services.PlayerProgressService;
+﻿using Game.Data;
+using Game.Services.PlayerProgressService;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CodeBase.Services.SaveLoadService
+namespace Game.Services.SaveLoadService
 {
 	// This service implement saving and loading of progress.
 	// There are for example it implemented by PlayerPrefs but you can implement you own variant of service.

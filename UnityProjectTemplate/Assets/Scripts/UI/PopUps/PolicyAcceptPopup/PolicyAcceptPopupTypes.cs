@@ -1,4 +1,4 @@
-namespace CodeBase.UI.PopUps.PolicyAcceptPopup
+namespace Game.UI.PopUps.PolicyAcceptPopup
 {
 	public enum PolicyAcceptPopupTypes
 	{

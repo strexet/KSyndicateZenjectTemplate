@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Services.ServerConnectionService
+namespace Game.Services.ServerConnectionService
 {
 	public interface IServerConnectionService
 	{

@@ -1,4 +1,4 @@
-﻿namespace CodeBase.UI.Overlays
+﻿namespace Game.Infrastructure.UI.AwaitingOverlay
 {
 	public interface IAwaitingOverlay
 	{

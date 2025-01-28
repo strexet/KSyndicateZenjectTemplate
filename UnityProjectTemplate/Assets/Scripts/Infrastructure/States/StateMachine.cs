@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 
-namespace CodeBase.Infrastructure.States
+namespace Game.Infrastructure.States
 {
 	public abstract class StateMachine : IStateMachine
 	{

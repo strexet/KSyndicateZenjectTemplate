@@ -1,7 +1,7 @@
-using CodeBase.Infrastructure.States;
 using Cysharp.Threading.Tasks;
+using Game.Infrastructure.States;
 
-namespace CodeBase.Gameplay.States
+namespace Game.Gameplay.States
 {
 	/// <summary>
 	///     Use such states for showing congratulation screens and offering bonuses for ads.

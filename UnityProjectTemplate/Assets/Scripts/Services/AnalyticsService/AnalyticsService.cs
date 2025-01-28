@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Services.AnalyticsService
+﻿namespace Game.Services.AnalyticsService
 {
 	public class AnalyticsService : IAnalyticsService
 	{

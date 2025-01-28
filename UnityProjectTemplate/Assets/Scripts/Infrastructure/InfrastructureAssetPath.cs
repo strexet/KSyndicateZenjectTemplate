@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Infrastructure
+﻿namespace Game.Infrastructure
 {
 	public class InfrastructureAssetPath
 	{

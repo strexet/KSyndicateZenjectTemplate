@@ -1,9 +1,9 @@
-﻿using CodeBase.Infrastructure.States;
-using CodeBase.UI;
+﻿using Game.Infrastructure.States;
+using Game.UI;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.GameLoading
+namespace Game.GameLoading
 {
 	public class GameLoadingSceneInstaller : MonoInstaller
 	{

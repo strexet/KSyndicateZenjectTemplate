@@ -1,9 +1,9 @@
-﻿using CodeBase.Infrastructure.States;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Infrastructure.States;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Infrastructure
+namespace Game.Infrastructure
 {
 	public class GameBootstrapper : MonoBehaviour
 	{

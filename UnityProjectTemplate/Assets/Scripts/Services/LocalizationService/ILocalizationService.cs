@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Services.LocalizationService
+﻿namespace Game.Services.LocalizationService
 {
 	public interface ILocalizationService
 	{

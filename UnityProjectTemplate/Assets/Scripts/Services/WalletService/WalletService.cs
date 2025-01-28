@@ -1,12 +1,12 @@
-﻿using CodeBase.Data;
-using CodeBase.Services.PlayerProgressService;
+﻿using Game.Data;
+using Game.Services.PlayerProgressService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Services.WalletService
+namespace Game.Services.WalletService
 {
 	public class WalletService : IWalletService, IProgressReader, IProgressSaver, IInitializable
 	{

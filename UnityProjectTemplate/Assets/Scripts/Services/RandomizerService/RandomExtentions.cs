@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CodeBase.Services.RandomizerService
+namespace Game.Services.RandomizerService
 {
 	public static class RandomExtentions
 	{

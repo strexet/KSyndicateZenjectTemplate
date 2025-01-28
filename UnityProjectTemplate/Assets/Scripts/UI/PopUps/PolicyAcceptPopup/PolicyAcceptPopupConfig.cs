@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.UI.PopUps.PolicyAcceptPopup
+namespace Game.UI.PopUps.PolicyAcceptPopup
 {
 	[CreateAssetMenu(menuName = "Configs/UI/Popups/PolicyAcceptPopupConfig")]
 	public class PolicyAcceptPopupConfig : ScriptableObject

@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-namespace CodeBase.Infrastructure.States
+namespace Game.Infrastructure.States
 {
 	public class StatesFactory
 	{

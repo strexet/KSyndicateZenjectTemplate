@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Services.WalletService
+﻿namespace Game.Services.WalletService
 {
 	public enum CurrencyType
 	{

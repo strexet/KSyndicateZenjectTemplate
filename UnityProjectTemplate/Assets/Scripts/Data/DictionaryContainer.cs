@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CodeBase.Data
+namespace Game.Data
 {
 	[Serializable]
 	public class DictionarySerializeContainer<TKey, TValue>

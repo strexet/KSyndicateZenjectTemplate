@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Services.InputService
+﻿namespace Game.Services.InputService
 {
 	public interface IInputService { }
 }

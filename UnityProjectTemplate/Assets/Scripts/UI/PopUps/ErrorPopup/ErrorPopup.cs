@@ -1,11 +1,11 @@
-﻿using CodeBase.Services.LocalizationService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Services.LocalizationService;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace CodeBase.UI.PopUps.ErrorPopup
+namespace Game.UI.PopUps.ErrorPopup
 {
 	public class ErrorPopup : PopUpBase<bool, ErrorPopupConfig>
 	{

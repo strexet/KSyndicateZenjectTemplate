@@ -1,10 +1,10 @@
-﻿using CodeBase.GameLoading.States;
-using CodeBase.Infrastructure.States;
-using CodeBase.Services.LogService;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.GameLoading.States;
+using Game.Infrastructure.States;
+using Game.Services.LogService;
 using Zenject;
 
-namespace CodeBase.GameLoading
+namespace Game.GameLoading
 {
 	public class GameLoadingSceneBootstraper : IInitializable
 	{

@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Infrastructure.States
+﻿namespace Game.Infrastructure.States
 {
 	/// <summary>
 	///     Global state machine that switches global states of the game.

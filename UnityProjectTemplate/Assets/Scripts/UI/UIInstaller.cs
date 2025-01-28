@@ -1,9 +1,9 @@
-﻿using CodeBase.UI.Services.Factories;
-using CodeBase.UI.Services.PopUps;
-using CodeBase.UI.Services.Window;
+﻿using Game.UI.Services.Factories;
+using Game.UI.Services.PopUps;
+using Game.UI.Services.Window;
 using Zenject;
 
-namespace CodeBase.UI
+namespace Game.UI
 {
 	public class UIInstaller : Installer<UIInstaller>
 	{

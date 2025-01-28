@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.UI.Elements
+namespace Game.UI.Elements
 {
 	public class Rotator : MonoBehaviour
 	{

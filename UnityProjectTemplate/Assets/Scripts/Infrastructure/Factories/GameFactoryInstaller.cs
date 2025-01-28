@@ -1,7 +1,7 @@
-using CodeBase.UI.HUD;
+using Game.UI.HUD;
 using Zenject;
 
-namespace CodeBase.Infrastructure.Factories
+namespace Game.Infrastructure.Factories
 {
 	/// <summary>
 	///     Bind game sub-factories here.

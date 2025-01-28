@@ -1,6 +1,6 @@
-﻿using CodeBase.Data;
+﻿using Game.Data;
 
-namespace CodeBase.Services.SaveLoadService
+namespace Game.Services.SaveLoadService
 {
 	public interface ISaveLoadService
 	{

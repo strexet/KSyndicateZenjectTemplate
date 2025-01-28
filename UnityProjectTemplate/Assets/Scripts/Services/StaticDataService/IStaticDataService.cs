@@ -1,8 +1,8 @@
-﻿using CodeBase.Services.ServerConnectionService;
-using CodeBase.UI.PopUps.PolicyAcceptPopup;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.Services.ServerConnectionService;
+using Game.UI.PopUps.PolicyAcceptPopup;
 
-namespace CodeBase.Services.StaticDataService
+namespace Game.Services.StaticDataService
 {
 	public interface IStaticDataService
 	{

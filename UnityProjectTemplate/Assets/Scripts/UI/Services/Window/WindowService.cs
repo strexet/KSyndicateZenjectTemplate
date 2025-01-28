@@ -1,7 +1,7 @@
-﻿using CodeBase.UI.Services.Factories;
+﻿using Game.UI.Services.Factories;
 using System;
 
-namespace CodeBase.UI.Services.Window
+namespace Game.UI.Services.Window
 {
 	public class WindowService
 	{

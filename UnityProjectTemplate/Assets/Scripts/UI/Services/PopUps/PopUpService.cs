@@ -1,12 +1,12 @@
-﻿using CodeBase.UI.PopUps.ErrorPopup;
-using CodeBase.UI.PopUps.PolicyAcceptPopup;
-using CodeBase.UI.Services.Factories;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
+using Game.UI.PopUps.ErrorPopup;
+using Game.UI.PopUps.PolicyAcceptPopup;
+using Game.UI.Services.Factories;
 using System;
 using System.Threading;
 using Object = UnityEngine.Object;
 
-namespace CodeBase.UI.Services.PopUps
+namespace Game.UI.Services.PopUps
 {
 	public class PopUpService : IPopUpService, IDisposable
 	{

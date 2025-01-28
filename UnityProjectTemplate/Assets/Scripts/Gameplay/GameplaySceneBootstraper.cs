@@ -1,10 +1,10 @@
-using CodeBase.Gameplay.States;
-using CodeBase.Infrastructure.States;
-using CodeBase.Services.LogService;
 using Cysharp.Threading.Tasks;
+using Game.Gameplay.States;
+using Game.Infrastructure.States;
+using Game.Services.LogService;
 using Zenject;
 
-namespace CodeBase.Gameplay
+namespace Game.Gameplay
 {
 	public class GameplaySceneBootstraper : IInitializable
 	{

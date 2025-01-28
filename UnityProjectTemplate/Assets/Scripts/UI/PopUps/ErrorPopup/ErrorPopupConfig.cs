@@ -1,4 +1,4 @@
-﻿namespace CodeBase.UI.PopUps.ErrorPopup
+﻿namespace Game.UI.PopUps.ErrorPopup
 {
 	public class ErrorPopupConfig
 	{

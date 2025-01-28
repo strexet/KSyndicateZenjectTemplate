@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Infrastructure.States
+﻿namespace Game.Infrastructure.States
 {
 	/// <summary>
 	///     Local state machine for switching scene states (for example, states of a gameplay level).
