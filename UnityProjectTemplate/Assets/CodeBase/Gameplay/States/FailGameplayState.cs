@@ -3,17 +3,13 @@ using Cysharp.Threading.Tasks;
 
 namespace CodeBase.Gameplay.States
 {
-    public class FailGameplayState : IState
-    {
-        public UniTask Enter()
-        {
-            // use such states for showing fail screens and offering resurrections and so on
-            return default;
-        }
+	/// <summary>
+	///     Use such states for showing fail screens and offering resurrections and so on.
+	/// </summary>
+	public class FailGameplayState : IState
+	{
+		public UniTask Enter() => default;
 
-        public UniTask Exit()
-        {
-            return default;
-        }
-    }
+		public UniTask Exit() => default;
+	}
 }

@@ -6,34 +6,34 @@ using Zenject;
 
 namespace CodeBase.UI.Windows
 {
-    public abstract class WindowBase : MonoBehaviour
-    {
-        [SerializeField] protected Button CloseButton;
-    
-        protected IPersistentProgressService ProgressService;
-        protected PlayerProgress Progress => ProgressService.Progress;
+	public abstract class WindowBase : MonoBehaviour
+	{
+		[SerializeField] protected Button CloseButton;
 
-        [Inject]
-        public void Construct(IPersistentProgressService progressService) => 
-            ProgressService = progressService;
+		protected IPersistentProgressService ProgressService;
 
-        private void Awake() => 
-            OnAwake();
+		protected PlayerProgress Progress => ProgressService.Progress;
+		
+		[Inject]
+		public void Construct(IPersistentProgressService progressService) =>
+			ProgressService = progressService;
 
-        private void Start()
-        {
-            Initialize();
-            SubscribeUpdates();
-        }
+		void Awake() => OnAwake();
 
-        private void OnDestroy() => 
-            Cleanup();
+		void Start()
+		{
+			Initialize();
+			SubscribeUpdates();
+		}
 
-        protected virtual void OnAwake() => 
-            CloseButton?.onClick.AddListener(()=> Destroy(gameObject));
+		void OnDestroy() => Cleanup();
 
-        protected virtual void Initialize(){}
-        protected virtual void SubscribeUpdates(){}
-        protected virtual void Cleanup(){}
-    }
+		protected virtual void OnAwake() => CloseButton?.onClick.AddListener(() => Destroy(gameObject));
+
+		protected virtual void Initialize() { }
+
+		protected virtual void SubscribeUpdates() { }
+
+		protected virtual void Cleanup() { }
+	}
 }

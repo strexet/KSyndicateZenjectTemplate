@@ -1,7 +1,4 @@
 ﻿namespace CodeBase.Services.InputService
 {
-    public interface IInputService
-    {
-        
-    }
+	public interface IInputService { }
 }

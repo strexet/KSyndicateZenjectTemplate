@@ -1,10 +1,9 @@
 ﻿namespace CodeBase.Infrastructure.States
 {
-    // Global state machine that switch globas states of the game.
-    // Bind in project context to be available globaly
-    // Game bootstraper fill this FSM by states
-    public class GameStateMachine : StateMachine
-    {
-
-    }
+	/// <summary>
+	/// Global state machine that switches global states of the game.
+	/// It is bound in the project context to be available globally.
+	/// Game bootstraper fills this FSM with global states.
+	/// </summary>
+	public class GameStateMachine : StateMachine { }
 }

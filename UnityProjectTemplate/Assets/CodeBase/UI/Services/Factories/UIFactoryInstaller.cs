@@ -6,21 +6,23 @@ using Zenject;
 
 namespace CodeBase.UI.Services.Factories
 {
-    public class UIFactoryInstaller : Installer<UIFactoryInstaller>
-    {
-        public override void InstallBindings()
-        {
-            // bind ui factories here
-            Container.Bind<IUIFactory>().To<UIFactory>().AsSingle();
+	/// <summary>
+	/// Bind ui factories here
+	/// </summary>
+	public class UIFactoryInstaller : Installer<UIFactoryInstaller>
+	{
+		public override void InstallBindings()
+		{
+			
+			Container.Bind<IUIFactory>().To<UIFactory>()
+					 .AsSingle();
 
-            // that an example of binding zenject factories working in async way
-            Container
-                .BindFactory<string, UniTask<PolicyAcceptPopup>, PolicyAcceptPopup.Factory>()
-                .FromFactory<PrefabFactoryAsync<PolicyAcceptPopup>>();
-            
-            Container
-                .BindFactory<string, UniTask<ErrorPopup>, ErrorPopup.Factory>()
-                .FromFactory<PrefabFactoryAsync<ErrorPopup>>();
-        }
-    }
+			// Eexample of binding zenject factories in async
+			Container.BindFactory<string, UniTask<PolicyAcceptPopup>, PolicyAcceptPopup.Factory>()
+					 .FromFactory<PrefabFactoryAsync<PolicyAcceptPopup>>();
+
+			Container.BindFactory<string, UniTask<ErrorPopup>, ErrorPopup.Factory>()
+					 .FromFactory<PrefabFactoryAsync<ErrorPopup>>();
+		}
+	}
 }

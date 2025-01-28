@@ -3,14 +3,8 @@ using Zenject;
 
 namespace CodeBase.UI.HUD
 {
-    public class HUDRoot : MonoBehaviour, IHUDRoot
-    {
-
-
-
-        public class Factory : PlaceholderFactory<HUDRoot>
-        {
-            
-        }
-    }
+	public class HUDRoot : MonoBehaviour, IHUDRoot
+	{
+		public class Factory : PlaceholderFactory<HUDRoot> { }
+	}
 }

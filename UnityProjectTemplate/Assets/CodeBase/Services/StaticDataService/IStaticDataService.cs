@@ -4,10 +4,12 @@ using Cysharp.Threading.Tasks;
 
 namespace CodeBase.Services.StaticDataService
 {
-    public interface IStaticDataService
-    {
-        UniTask InitializeAsync();
-        ServerConnectionConfig ServerConnectionConfig { get; }
-        PolicyAcceptPopupConfig GetPolicyAcceptPopupConfig(PolicyAcceptPopupTypes type);
-    }
+	public interface IStaticDataService
+	{
+		ServerConnectionConfig ServerConnectionConfig { get; }
+
+		UniTask InitializeAsync();
+
+		PolicyAcceptPopupConfig GetPolicyAcceptPopupConfig(PolicyAcceptPopupTypes type);
+	}
 }

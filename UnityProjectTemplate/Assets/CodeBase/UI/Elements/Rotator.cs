@@ -1,14 +1,12 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace CodeBase.UI.Elements
 {
-    public class Rotator : MonoBehaviour
-    {
-        [SerializeField] private Vector3 rotationAxis;
-        [SerializeField] private float rotationSpeed;
+	public class Rotator : MonoBehaviour
+	{
+		[SerializeField] Vector3 rotationAxis;
+		[SerializeField] float rotationSpeed;
 
-        private void Update() => 
-            transform.Rotate(rotationAxis, rotationSpeed * Time.deltaTime);
-    }
+		void Update() => transform.Rotate(rotationAxis, rotationSpeed * Time.deltaTime);
+	}
 }

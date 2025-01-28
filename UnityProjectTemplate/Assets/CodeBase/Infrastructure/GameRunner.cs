@@ -3,21 +3,24 @@ using Zenject;
 
 namespace CodeBase.Infrastructure
 {
-    public class GameRunner : MonoBehaviour
-    {
-        GameBootstrapper.Factory gameBootstrapperFactory;
+	public class GameRunner : MonoBehaviour
+	{
+		GameBootstrapper.Factory gameBootstrapperFactory;
 
-        [Inject]
-        void Construct(GameBootstrapper.Factory bootstrapperFactory) => 
-            this.gameBootstrapperFactory = bootstrapperFactory;
+		[Inject]
+		void Construct(GameBootstrapper.Factory bootstrapperFactory) => gameBootstrapperFactory = bootstrapperFactory;
 
-        private void Awake()
-        {
-            var bootstrapper = FindObjectOfType<GameBootstrapper>();
-      
-            if(bootstrapper != null) return;
+		void Awake()
+		{
+			var bootstrapper = FindObjectOfType<GameBootstrapper>();
 
-            gameBootstrapperFactory.Create();
-        }
-    }
+			if (bootstrapper != null)
+			{
+				return;
+			}
+
+			gameBootstrapperFactory.Create();
+		}
+
+	}
 }

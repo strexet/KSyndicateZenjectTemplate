@@ -7,44 +7,53 @@ using Zenject;
 
 namespace CodeBase.UI.Elements
 {
-    public class GameStateSwitchButton : MonoBehaviour
-    {
-        public enum TargetStates
-        {
-            None = 0,
-            Loading = 1,
-            GameHub = 2,
-            Gameplay = 3 ,
-        }
-        
-        [SerializeField] private TargetStates targetState = 0;
-        [SerializeField] private Button button;
+	public class GameStateSwitchButton : MonoBehaviour
+	{
+		public enum TargetStates
+		{
+			None = 0,
+			Loading = 1,
+			GameHub = 2,
+			Gameplay = 3,
+		}
 
-        private GameStateMachine gameStateMachine;
-        private ILogService log;
+		[SerializeField] TargetStates targetState = 0;
+		[SerializeField] Button button;
 
-        [Inject]
-        void Construct(GameStateMachine gameStateMachine, ILogService log)
-        {
-            this.gameStateMachine = gameStateMachine;
-            this.log = log;
-        }
+		GameStateMachine gameStateMachine;
+		ILogService log;
+		
+		[Inject]
+		void Construct(GameStateMachine gameStateMachine, ILogService log)
+		{
+			this.gameStateMachine = gameStateMachine;
+			this.log = log;
+		}
 
-        private void OnEnable() => 
-            button.onClick.AddListener(OnClick);
+		void OnEnable() => button.onClick.AddListener(OnClick);
 
-        private void OnDisable() => 
-            button.onClick.RemoveListener(OnClick);
+		void OnDisable() => button.onClick.RemoveListener(OnClick);
 
-        private void OnClick()
-        {
-            switch (targetState)
-            {
-                case TargetStates.Loading: gameStateMachine.Enter<GameLoadingState>().Forget(); break;
-                case TargetStates.GameHub: gameStateMachine.Enter<GameHubState>().Forget(); break;
-                case TargetStates.Gameplay: gameStateMachine.Enter<GameplayState>().Forget(); break;
-                default: log.LogError("Not valid option"); break;
-            }
-        }
-    }
+		void OnClick()
+		{
+			switch (targetState)
+			{
+				case TargetStates.Loading: 
+					gameStateMachine.Enter<GameLoadingState>().Forget(); 
+					break;
+				
+				case TargetStates.GameHub: 
+					gameStateMachine.Enter<GameHubState>().Forget(); 
+					break;
+				
+				case TargetStates.Gameplay: 
+					gameStateMachine.Enter<GameplayState>().Forget(); 
+					break;
+				
+				default: 
+					log.LogError("Not valid option"); 
+					break;
+			}
+		}
+	}
 }

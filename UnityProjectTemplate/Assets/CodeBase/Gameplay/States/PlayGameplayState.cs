@@ -3,17 +3,15 @@ using Cysharp.Threading.Tasks;
 
 namespace CodeBase.Gameplay.States
 {
-    public class PlayGameplayState : IState
-    {
-        public UniTask Enter()
-        {
-            // use such states for actual gameplay
-            return default;
-        }
+	/// <summary>
+	/// Use such states for actual gameplay.
+	/// </summary>
+	public class PlayGameplayState : IState
+	{
+		public UniTask Enter() =>
+			
+			default;
 
-        public UniTask Exit()
-        {
-            return default;
-        }
-    }
+		public UniTask Exit() => default;
+	}
 }

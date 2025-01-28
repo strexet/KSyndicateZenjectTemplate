@@ -1,7 +1,7 @@
 ﻿namespace CodeBase.Services.AnalyticsService
 {
-    public interface IAnalyticsService
-    {
-        void Initialize();
-    }
+	public interface IAnalyticsService
+	{
+		void Initialize();
+	}
 }

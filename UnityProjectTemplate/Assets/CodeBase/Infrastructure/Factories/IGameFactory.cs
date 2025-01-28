@@ -2,9 +2,10 @@
 
 namespace CodeBase.Infrastructure.Factories
 {
-    public interface IGameFactory
-    {
-        IHUDRoot CreateHUD();
-        void Cleanup();
-    }
+	public interface IGameFactory
+	{
+		IHUDRoot CreateHUD();
+
+		void Cleanup();
+	}
 }

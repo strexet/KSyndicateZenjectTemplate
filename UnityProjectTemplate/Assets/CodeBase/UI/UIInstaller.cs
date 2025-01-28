@@ -5,15 +5,17 @@ using Zenject;
 
 namespace CodeBase.UI
 {
-    public class UIInstaller : Installer<UIInstaller>
-    {
-        public override void InstallBindings()
-        {
-            UIFactoryInstaller.Install(Container);
+	public class UIInstaller : Installer<UIInstaller>
+	{
+		public override void InstallBindings()
+		{
+			UIFactoryInstaller.Install(Container);
 
-            Container.BindInterfacesAndSelfTo<WindowService>().AsSingle();
+			Container.BindInterfacesAndSelfTo<WindowService>()
+					 .AsSingle();
 
-            Container.BindInterfacesAndSelfTo<PopUpService>().AsSingle();
-        }
-    }
+			Container.BindInterfacesAndSelfTo<PopUpService>()
+					 .AsSingle();
+		}
+	}
 }

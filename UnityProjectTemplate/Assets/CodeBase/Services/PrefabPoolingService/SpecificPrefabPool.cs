@@ -5,47 +5,49 @@ using Zenject;
 
 namespace CodeBase.Services.PrefabPoolingService
 {
-    public class SpecificPrefabPool
-    {
-        private IInstantiator instantiator;
-        private GameObject prefab;
-        private GameObject poolRoot;
+	public class SpecificPrefabPool
+	{
+		readonly IInstantiator instantiator;
+		readonly GameObject prefab;
 
-        private Queue<GameObject> pool;
+		readonly Queue<GameObject> pool;
+		GameObject poolRoot;
 
-        public SpecificPrefabPool(GameObject prefab, IInstantiator instantiator)
-        {
-            this.prefab = prefab;
-            this.instantiator = instantiator;
+		public SpecificPrefabPool(GameObject prefab, IInstantiator instantiator)
+		{
+			this.prefab = prefab;
+			this.instantiator = instantiator;
+			pool = new Queue<GameObject>();
+		}
 
-            pool = new Queue<GameObject>();
-        }
+		public void Initialize()
+		{
+			poolRoot = new GameObject($"{prefab.name}_pool_{Guid.NewGuid()}");
+			GameObject.DontDestroyOnLoad(poolRoot);
+		}
 
-        public void Initialize()
-        {
-            poolRoot = new GameObject($"{prefab.name}_pool_{Guid.NewGuid()}");
-            GameObject.DontDestroyOnLoad(poolRoot);
-        }
+		public GameObject Spawn(Transform parent)
+		{
+			GameObject result = null;
 
-        public GameObject Spawn(Transform parent)
-        {
-            GameObject result = null;
-            if (!pool.TryDequeue(out result))
-                result = instantiator.InstantiatePrefab(prefab);
-            result.transform.SetParent(parent, false);
-            result.SetActive(true);
-            return result;
-        }
+			if (!pool.TryDequeue(out result))
+			{
+				result = instantiator.InstantiatePrefab(prefab);
+			}
 
-        public void Despawn(GameObject gameObject)
-        {
-            gameObject.SetActive(false);
-            gameObject.transform.SetParent(poolRoot.transform);
-            pool.Enqueue(gameObject);
-        }
+			result.transform.SetParent(parent, false);
+			result.SetActive(true);
 
-        public class Factory : PlaceholderFactory<GameObject, SpecificPrefabPool>
-        {
-        }
-    }
+			return result;
+		}
+
+		public void Despawn(GameObject gameObject)
+		{
+			gameObject.SetActive(false);
+			gameObject.transform.SetParent(poolRoot.transform);
+			pool.Enqueue(gameObject);
+		}
+
+		public class Factory : PlaceholderFactory<GameObject, SpecificPrefabPool> { }
+	}
 }

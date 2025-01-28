@@ -1,7 +1,7 @@
 ﻿namespace CodeBase.UI.Services.PopUps
 {
-    public enum PopUpId
-    {
-        PrivatePolicyAcceptPopup,
-    }
+	public enum PopUpId
+	{
+		PrivatePolicyAcceptPopup,
+	}
 }

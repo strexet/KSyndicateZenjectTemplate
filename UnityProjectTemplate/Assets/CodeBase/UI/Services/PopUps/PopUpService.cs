@@ -1,49 +1,47 @@
-﻿using System;
-using System.Threading;
-using CodeBase.UI.PopUps.ErrorPopup;
+﻿using CodeBase.UI.PopUps.ErrorPopup;
 using CodeBase.UI.PopUps.PolicyAcceptPopup;
 using CodeBase.UI.Services.Factories;
 using Cysharp.Threading.Tasks;
+using System;
+using System.Threading;
 using Object = UnityEngine.Object;
 
 namespace CodeBase.UI.Services.PopUps
 {
-    public class PopUpService : IPopUpService, IDisposable
-    {
-        private readonly IUIFactory uiFactory;
-        
-        private readonly ErrorPopupConfig errorPopupConfig;
+	public class PopUpService : IPopUpService, IDisposable
+	{
+		readonly IUIFactory uiFactory;
+		readonly ErrorPopupConfig errorPopupConfig;
+		readonly CancellationTokenSource ctn;
 
-        private CancellationTokenSource ctn;
-        
-        public PopUpService(IUIFactory uiFactory)
-        {
-            this.uiFactory = uiFactory;
-            
-            errorPopupConfig = new ErrorPopupConfig();
-            ctn = new CancellationTokenSource();
-        }
+		public PopUpService(IUIFactory uiFactory)
+		{
+			this.uiFactory = uiFactory;
+			errorPopupConfig = new ErrorPopupConfig();
+			ctn = new CancellationTokenSource();
+		}
 
-        public async UniTask<bool> AskPolicyPopup(PolicyAcceptPopupConfig config)
-        {
-            var popup = await uiFactory.CreatePolicyAskingPopup();
-            bool result = await popup.Show(config).AttachExternalCancellation(ctn.Token);
-            Object.Destroy(popup);
-            return result;
-        }
+		public void Dispose() => ctn.Cancel();
 
-        public async UniTask ShowError(string messageHeader, string messageBody, string buttonText = "OK")
-        {
-            errorPopupConfig.HeaderText = messageHeader;
-            errorPopupConfig.MessageText = messageBody;
-            errorPopupConfig.ButtonText = buttonText;
+		public async UniTask<bool> AskPolicyPopup(PolicyAcceptPopupConfig config)
+		{
+			var popup = await uiFactory.CreatePolicyAskingPopup();
+			var result = await popup.Show(config).AttachExternalCancellation(ctn.Token);
+			Object.Destroy(popup);
+			
+			return result;
+		}
 
-            var errorPopup = await uiFactory.CreateErrorPopup();
-            await errorPopup.Show(errorPopupConfig).AttachExternalCancellation(ctn.Token);
-            errorPopup.Hide();
-        }
+		public async UniTask ShowError(string messageHeader, string messageBody, string buttonText = "OK")
+		{
+			errorPopupConfig.HeaderText = messageHeader;
+			errorPopupConfig.MessageText = messageBody;
+			errorPopupConfig.ButtonText = buttonText;
 
-        public void Dispose() => 
-            ctn.Cancel();
-    }
+			var errorPopup = await uiFactory.CreateErrorPopup();
+			await errorPopup.Show(errorPopupConfig).AttachExternalCancellation(ctn.Token);
+			
+			errorPopup.Hide();
+		}
+	}
 }

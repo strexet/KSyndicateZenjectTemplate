@@ -4,22 +4,23 @@ using Zenject;
 
 namespace CodeBase.Infrastructure.AssetManagement
 {
-    public class PrefabFactoryAsync<TComponent> : IFactory<string, UniTask<TComponent>>
-    {
-        private IInstantiator instantiator;
-        private IAssetProvider assetProvider;
+	public class PrefabFactoryAsync<TComponent> : IFactory<string, UniTask<TComponent>>
+	{
+		readonly IInstantiator instantiator;
+		readonly IAssetProvider assetProvider;
 
-        public PrefabFactoryAsync(IInstantiator instantiator, IAssetProvider assetProvider)
-        {
-            this.instantiator = instantiator;
-            this.assetProvider = assetProvider;
-        }
+		public PrefabFactoryAsync(IInstantiator instantiator,
+			IAssetProvider assetProvider)
+		{
+			this.instantiator = instantiator;
+			this.assetProvider = assetProvider;
+		}
 
-        public async UniTask<TComponent> Create(string assetKey)
-        {
-            GameObject prefab = await assetProvider.Load<GameObject>(assetKey);
-            GameObject newObject = instantiator.InstantiatePrefab(prefab);
-            return newObject.GetComponent<TComponent>();
-        }
-    }
+		public async UniTask<TComponent> Create(string assetKey)
+		{
+			var prefab = await assetProvider.Load<GameObject>(assetKey);
+			var newObject = instantiator.InstantiatePrefab(prefab);
+			return newObject.GetComponent<TComponent>();
+		}
+	}
 }

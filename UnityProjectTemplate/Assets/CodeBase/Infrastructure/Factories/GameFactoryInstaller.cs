@@ -3,14 +3,19 @@ using Zenject;
 
 namespace CodeBase.Infrastructure.Factories
 {
-    public class GameFactoryInstaller : Installer<GameFactoryInstaller>
-    {
-        public override void InstallBindings()
-        {
-            // bind sub-factories here
-            Container.BindFactory<HUDRoot, HUDRoot.Factory>().FromComponentInNewPrefabResource(InfrastructureAssetPath.HUDRoot);
-        
-            Container.Bind<IGameFactory>().To<GameFactory>().AsSingle();
-        }
-    }
+	/// <summary>
+	/// Bind game sub-factories here.
+	/// </summary>
+	public class GameFactoryInstaller : Installer<GameFactoryInstaller>
+	{
+		public override void InstallBindings()
+		{
+			Container.BindFactory<HUDRoot, HUDRoot.Factory>()
+					 .FromComponentInNewPrefabResource(InfrastructureAssetPath.HUDRoot);
+			
+			Container.Bind<IGameFactory>()
+					 .To<GameFactory>()
+					 .AsSingle();
+		}
+	}
 }

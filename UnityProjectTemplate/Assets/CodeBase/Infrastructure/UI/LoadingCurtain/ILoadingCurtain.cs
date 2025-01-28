@@ -1,8 +1,9 @@
 namespace CodeBase.Infrastructure.UI.LoadingCurtain
 {
-    public interface ILoadingCurtain
-    {
-        void Show();
-        void Hide();
-    }
+	public interface ILoadingCurtain
+	{
+		void Show();
+
+		void Hide();
+	}
 }

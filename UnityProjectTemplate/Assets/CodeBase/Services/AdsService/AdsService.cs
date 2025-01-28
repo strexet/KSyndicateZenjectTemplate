@@ -1,30 +1,27 @@
-﻿using System;
-using CodeBase.Services.LogService;
-using UnityEngine;
+﻿using CodeBase.Services.LogService;
+using System;
 
 namespace CodeBase.Services.AdsService
 {
-    public class AdsService : IAdsService
-    {
-        public event Action RewardedVideoReady;
+	public class AdsService : IAdsService
+	{
 
-        public bool IsRewardedVideoReady { get; }
+		readonly ILogService log;
 
-        private readonly ILogService log;
+		public AdsService(ILogService log) => this.log = log;
 
-        public AdsService(ILogService log)
-        {
-            this.log = log;
-        }
+		public event Action RewardedVideoReady;
 
-        public void Initialize()
-        {
-            log.LogWarning("Initialization of ads service isn't implemented yet");
-        }
+		public bool IsRewardedVideoReady { get; }
 
-        public void ShowRewardedVideo(Action onVideoFinished)
-        {
-            log.LogWarning("Showing of ads isn't implemented yet");
-        }
-    }
+		public void Initialize()
+		{
+			log.LogWarning("Initialization of ads service isn't implemented yet");
+		}
+
+		public void ShowRewardedVideo(Action onVideoFinished)
+		{
+			log.LogWarning("Showing of ads isn't implemented yet");
+		}
+	}
 }

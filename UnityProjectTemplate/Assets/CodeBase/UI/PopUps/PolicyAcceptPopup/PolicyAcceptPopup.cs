@@ -8,72 +8,68 @@ using Zenject;
 
 namespace CodeBase.UI.PopUps.PolicyAcceptPopup
 {
-    public class PolicyAcceptPopup : PopUpBase<bool, PolicyAcceptPopupConfig>
-    {
-        [SerializeField] private Toggle toggle;
-        [SerializeField] private Button button;
-        [SerializeField] private TextMeshProUGUI policyText;
-        [SerializeField] private TextMeshProUGUI agreeText;
-        [SerializeField] private TextMeshProUGUI buttonText;
+	public class PolicyAcceptPopup : PopUpBase<bool, PolicyAcceptPopupConfig>
+	{
+		[SerializeField] Toggle toggle;
+		[SerializeField] Button button;
+		[SerializeField] TextMeshProUGUI policyText;
+		[SerializeField] TextMeshProUGUI agreeText;
+		[SerializeField] TextMeshProUGUI buttonText;
 
-        private ILocalizationService localizationService;
-        private ILogService log;
+		ILocalizationService localizationService;
+		ILogService log;
 
-        [Inject]
-        public void Construct(ILocalizationService localizationService, ILogService log)
-        {
-            this.localizationService = localizationService;
-            this.log = log;
-        }
+		[Inject]
+		public void Construct(ILocalizationService localizationService, ILogService log)
+		{
+			this.localizationService = localizationService;
+			this.log = log;
+		}
 
-        protected override void Initialize(PolicyAcceptPopupConfig config)
-        {
-            base.Initialize(config);
-            FillData(config);
-            SetControlStates();
-        }
+		override protected void Initialize(PolicyAcceptPopupConfig config)
+		{
+			base.Initialize(config);
+			FillData(config);
+			SetControlStates();
+		}
 
-        private void SetControlStates()
-        {
-            toggle.isOn = false;
-            UpdateCloseButton(false);
-        }
+		void SetControlStates()
+		{
+			toggle.isOn = false;
+			UpdateCloseButton(false);
+		}
 
-        private void FillData(PolicyAcceptPopupConfig config)
-        {
-            policyText.text = localizationService.Translate(config.PolicyText);
-            agreeText.text = localizationService.Translate(config.AgreeText);
-            buttonText.text = localizationService.Translate(config.ButtonText);
-        }
+		void FillData(PolicyAcceptPopupConfig config)
+		{
+			policyText.text = localizationService.Translate(config.PolicyText);
+			agreeText.text = localizationService.Translate(config.AgreeText);
+			buttonText.text = localizationService.Translate(config.ButtonText);
+		}
 
-        protected override void SubscribeUpdates()
-        {
-            base.SubscribeUpdates();
-            toggle.onValueChanged.AddListener(OnToggleChange);
-            button.onClick.AddListener(OnButtonClick);
-        }
+		override protected void SubscribeUpdates()
+		{
+			base.SubscribeUpdates();
+			toggle.onValueChanged.AddListener(OnToggleChange);
+			button.onClick.AddListener(OnButtonClick);
+		}
 
-        void OnToggleChange(bool value)
-        {
-            log.Log($"Private policy acceptance set to: {value}");
-            UpdateCloseButton(value);
-        }
+		void OnToggleChange(bool value)
+		{
+			log.Log($"Private policy acceptance set to: {value}");
+			UpdateCloseButton(value);
+		}
 
-        void UpdateCloseButton(bool enable) => 
-            button.interactable = enable;
+		void UpdateCloseButton(bool enable) => button.interactable = enable;
 
-        protected override void Cleanup()
-        {
-            base.Cleanup();
-            toggle.onValueChanged.RemoveListener(OnToggleChange);
-            button.onClick.RemoveListener(OnButtonClick);
-        }
+		override protected void Cleanup()
+		{
+			base.Cleanup();
+			toggle.onValueChanged.RemoveListener(OnToggleChange);
+			button.onClick.RemoveListener(OnButtonClick);
+		}
 
-        void OnButtonClick() => 
-            SetPopUpResult(toggle.isOn);
+		void OnButtonClick() => SetPopUpResult(toggle.isOn);
 
-        public class Factory : PlaceholderFactory<string, UniTask<PolicyAcceptPopup>>
-        {
-        }
-    }
+		public class Factory : PlaceholderFactory<string, UniTask<PolicyAcceptPopup>> { }
+	}
 }

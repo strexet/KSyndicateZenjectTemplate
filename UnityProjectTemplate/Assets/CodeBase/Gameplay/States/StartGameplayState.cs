@@ -3,22 +3,17 @@ using Cysharp.Threading.Tasks;
 
 namespace CodeBase.Gameplay.States
 {
-    public class StartGameplayState : IState
-    {
-        private readonly SceneStateMachine sceneStateMachine;
+	/// <summary>
+	/// You can use states like this for showing starting cut scenes, objectives on the level, explaining game rules and so on.
+	/// </summary>
+	public class StartGameplayState : IState
+	{
+		readonly SceneStateMachine sceneStateMachine;
 
-        public StartGameplayState(SceneStateMachine sceneStateMachine) => 
-            this.sceneStateMachine = sceneStateMachine;
+		public StartGameplayState(SceneStateMachine sceneStateMachine) => this.sceneStateMachine = sceneStateMachine;
 
-        public async UniTask Enter()
-        {
-            // you can use states like this for showing starting cut scenes, objectives on the level, explaining game rules and so on
-            sceneStateMachine.Enter<PlayGameplayState>().Forget();
-        }
+		public async UniTask Enter() => sceneStateMachine.Enter<PlayGameplayState>().Forget();
 
-        public UniTask Exit()
-        {
-            return default;
-        }
-    }
+		public UniTask Exit() => default;
+	}
 }

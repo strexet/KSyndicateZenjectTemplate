@@ -4,11 +4,12 @@ using Cysharp.Threading.Tasks;
 
 namespace CodeBase.UI.Services.Factories
 {
-    public interface IUIFactory
-    {
-        
-        void Cleanup();
-        UniTask<PolicyAcceptPopup> CreatePolicyAskingPopup();
-        UniTask<ErrorPopup> CreateErrorPopup();
-    }
+	public interface IUIFactory
+	{
+		void Cleanup();
+
+		UniTask<PolicyAcceptPopup> CreatePolicyAskingPopup();
+
+		UniTask<ErrorPopup> CreateErrorPopup();
+	}
 }

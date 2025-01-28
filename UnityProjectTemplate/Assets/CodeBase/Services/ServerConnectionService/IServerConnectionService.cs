@@ -2,8 +2,8 @@
 
 namespace CodeBase.Services.ServerConnectionService
 {
-    public interface IServerConnectionService
-    {
-        UniTask<ConnectionResult> Connect(ServerConnectionConfig config);
-    }
+	public interface IServerConnectionService
+	{
+		UniTask<ConnectionResult> Connect(ServerConnectionConfig config);
+	}
 }

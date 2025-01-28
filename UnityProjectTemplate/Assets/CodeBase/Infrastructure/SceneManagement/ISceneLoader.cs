@@ -2,8 +2,8 @@
 
 namespace CodeBase.Infrastructure.SceneManagement
 {
-    public interface ISceneLoader
-    {
-        UniTask Load(string nextScene);
-    }
+	public interface ISceneLoader
+	{
+		UniTask Load(string nextScene);
+	}
 }

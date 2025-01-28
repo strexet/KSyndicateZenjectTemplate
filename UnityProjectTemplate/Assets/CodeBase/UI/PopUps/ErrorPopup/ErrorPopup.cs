@@ -2,50 +2,44 @@
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Zenject;
 
 namespace CodeBase.UI.PopUps.ErrorPopup
 {
-    public class ErrorPopup : PopUpBase<bool, ErrorPopupConfig>
-    {
-        [SerializeField] private TextMeshProUGUI headerText;
-        [SerializeField] private TextMeshProUGUI messageText;
-        [SerializeField] private TextMeshProUGUI buttonText;
-        [SerializeField] private Button button;
+	public class ErrorPopup : PopUpBase<bool, ErrorPopupConfig>
+	{
+		[SerializeField] TextMeshProUGUI headerText;
+		[SerializeField] TextMeshProUGUI messageText;
+		[SerializeField] TextMeshProUGUI buttonText;
+		[SerializeField] Button button;
 
-        private ILocalizationService localizationService;
+		ILocalizationService localizationService;
 
-        public void Construct(ILocalizationService localizationService) =>
-            this.localizationService = localizationService;
-        
-        protected override void Initialize(ErrorPopupConfig with)
-        {
-            base.Initialize(with);
-            
-            headerText.text = localizationService.Translate(with.HeaderText);
-            messageText.text = localizationService.Translate(with.MessageText);
-            buttonText.text = localizationService.Translate(with.ButtonText);
-        }
+		public void Construct(ILocalizationService localizationService) => this.localizationService = localizationService;
 
-        protected override void SubscribeUpdates()
-        {
-            base.SubscribeUpdates();
-            button.onClick.AddListener(OnClick);
-        }
+		override protected void Initialize(ErrorPopupConfig with)
+		{
+			base.Initialize(with);
+			headerText.text = localizationService.Translate(with.HeaderText);
+			messageText.text = localizationService.Translate(with.MessageText);
+			buttonText.text = localizationService.Translate(with.ButtonText);
+		}
 
-        private void OnClick() => 
-            SetPopUpResult(true);
+		override protected void SubscribeUpdates()
+		{
+			base.SubscribeUpdates();
+			button.onClick.AddListener(OnClick);
+		}
 
-        protected override void Cleanup()
-        {
-            base.Cleanup();
-            button.onClick.RemoveListener(OnClick);
-        }
+		void OnClick() => SetPopUpResult(true);
 
-        public class Factory : PlaceholderFactory<string, UniTask<ErrorPopup>>
-        {
-        }
-    }
+		override protected void Cleanup()
+		{
+			base.Cleanup();
+			button.onClick.RemoveListener(OnClick);
+		}
+
+		public class Factory : PlaceholderFactory<string, UniTask<ErrorPopup>> { }
+	}
 }

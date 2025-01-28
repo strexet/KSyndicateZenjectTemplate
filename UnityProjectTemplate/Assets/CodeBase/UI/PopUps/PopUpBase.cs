@@ -1,50 +1,47 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CodeBase.Data;
+﻿using CodeBase.Data;
 using CodeBase.Services.PlayerProgressService;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
 using Zenject;
 
 namespace CodeBase.UI.PopUps
 {
-    public abstract class PopUpBase<TResult, TInitializeData> : MonoBehaviour
-    {
-        [SerializeField] private Canvas popupCanvas;
-        
-        protected IPersistentProgressService ProgressService;
-        protected PlayerProgress Progress => ProgressService.Progress;
+	public abstract class PopUpBase<TResult, TInitializeData> : MonoBehaviour
+	{
+		[SerializeField] Canvas popupCanvas;
 
-        private UniTaskCompletionSource<TResult> taskCompletionSource;
+		protected IPersistentProgressService ProgressService;
 
-        [Inject]
-        public void Construct(IPersistentProgressService progressService) => 
-            ProgressService = progressService;
+		UniTaskCompletionSource<TResult> taskCompletionSource;
 
-        private void Awake() => 
-            OnAwake();
+		protected PlayerProgress Progress => ProgressService.Progress;
 
-        public UniTask<TResult> Show(TInitializeData with)
-        {
-            taskCompletionSource = new UniTaskCompletionSource<TResult>();
-            Initialize(with);
-            SubscribeUpdates();
-            popupCanvas.enabled = true;
-            return taskCompletionSource.Task;
-        }
+		[Inject]
+		public void Construct(IPersistentProgressService progressService) => ProgressService = progressService;
 
-        public void Hide() => popupCanvas.enabled = false;
-        
-        protected void SetPopUpResult(TResult result) =>
-            taskCompletionSource.TrySetResult(result);
+		void Awake() => OnAwake();
 
-        private void OnDestroy() => 
-            Cleanup();
+		void OnDestroy() => Cleanup();
 
-        protected virtual void OnAwake() => Hide();
-        protected virtual void Initialize(TInitializeData with){}
-        protected virtual void SubscribeUpdates(){}
-        protected virtual void Cleanup(){}
-    }
+		public UniTask<TResult> Show(TInitializeData with)
+		{
+			taskCompletionSource = new UniTaskCompletionSource<TResult>();
+			Initialize(with);
+			SubscribeUpdates();
+			popupCanvas.enabled = true;
+			return taskCompletionSource.Task;
+		}
+
+		public void Hide() => popupCanvas.enabled = false;
+
+		protected void SetPopUpResult(TResult result) => taskCompletionSource.TrySetResult(result);
+
+		protected virtual void OnAwake() => Hide();
+
+		protected virtual void Initialize(TInitializeData with) { }
+
+		protected virtual void SubscribeUpdates() { }
+
+		protected virtual void Cleanup() { }
+	}
 }
