@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 namespace CodeBase.Gameplay.States
 {
 	/// <summary>
-	/// Use such states for finishing gameplay and cleanup resources, posting session statistics and leaving Game State.
+	///     Use such states for finishing gameplay and cleanup resources, posting session statistics and leaving Game State.
 	/// </summary>
 	public class FinishGameplayState : IState
 	{

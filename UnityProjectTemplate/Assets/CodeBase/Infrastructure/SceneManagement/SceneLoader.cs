@@ -14,7 +14,7 @@ namespace CodeBase.Infrastructure.SceneManagement
 		public async UniTask Load(string nextScene)
 		{
 			log.Log($"Loading scene {nextScene}");
-			
+
 			var handler = Addressables.LoadSceneAsync(nextScene, LoadSceneMode.Single, false);
 
 			await handler.ToUniTask();

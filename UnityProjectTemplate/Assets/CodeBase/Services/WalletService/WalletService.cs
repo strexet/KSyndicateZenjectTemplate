@@ -15,7 +15,7 @@ namespace CodeBase.Services.WalletService
 		List<int> walletTypes = new();
 
 		/// <summary>
-		/// Currency, Old value, New value
+		///     Currency, Old value, New value
 		/// </summary>
 		public Action<CurrencyType, long, long> OnWalletUpdate { get; set; }
 

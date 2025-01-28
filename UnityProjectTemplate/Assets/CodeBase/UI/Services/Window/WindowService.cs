@@ -15,11 +15,11 @@ namespace CodeBase.UI.Services.Window
 			{
 				case WindowId.None:
 					break;
-				
+
 				case WindowId.PrivatePolicyAccept:
 					uiFactory.CreatePolicyAskingPopup();
 					break;
-				
+
 				default:
 					throw new ArgumentOutOfRangeException(nameof(window), window, null);
 			}

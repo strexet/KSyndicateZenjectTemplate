@@ -28,7 +28,7 @@ namespace CodeBase.UI.Services.PopUps
 			var popup = await uiFactory.CreatePolicyAskingPopup();
 			var result = await popup.Show(config).AttachExternalCancellation(ctn.Token);
 			Object.Destroy(popup);
-			
+
 			return result;
 		}
 
@@ -40,7 +40,7 @@ namespace CodeBase.UI.Services.PopUps
 
 			var errorPopup = await uiFactory.CreateErrorPopup();
 			await errorPopup.Show(errorPopupConfig).AttachExternalCancellation(ctn.Token);
-			
+
 			errorPopup.Hide();
 		}
 	}

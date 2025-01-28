@@ -22,7 +22,11 @@ namespace CodeBase.UI.Elements
 
 		GameStateMachine gameStateMachine;
 		ILogService log;
-		
+
+		void OnEnable() => button.onClick.AddListener(OnClick);
+
+		void OnDisable() => button.onClick.RemoveListener(OnClick);
+
 		[Inject]
 		void Construct(GameStateMachine gameStateMachine, ILogService log)
 		{
@@ -30,28 +34,24 @@ namespace CodeBase.UI.Elements
 			this.log = log;
 		}
 
-		void OnEnable() => button.onClick.AddListener(OnClick);
-
-		void OnDisable() => button.onClick.RemoveListener(OnClick);
-
 		void OnClick()
 		{
 			switch (targetState)
 			{
-				case TargetStates.Loading: 
-					gameStateMachine.Enter<GameLoadingState>().Forget(); 
+				case TargetStates.Loading:
+					gameStateMachine.Enter<GameLoadingState>().Forget();
 					break;
-				
-				case TargetStates.GameHub: 
-					gameStateMachine.Enter<GameHubState>().Forget(); 
+
+				case TargetStates.GameHub:
+					gameStateMachine.Enter<GameHubState>().Forget();
 					break;
-				
-				case TargetStates.Gameplay: 
-					gameStateMachine.Enter<GameplayState>().Forget(); 
+
+				case TargetStates.Gameplay:
+					gameStateMachine.Enter<GameplayState>().Forget();
 					break;
-				
-				default: 
-					log.LogError("Not valid option"); 
+
+				default:
+					log.LogError("Not valid option");
 					break;
 			}
 		}

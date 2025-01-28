@@ -10,8 +10,8 @@ namespace CodeBase.Services.ServerConnectionService
 		public async UniTask<ConnectionResult> Connect(ServerConnectionConfig config)
 		{
 			// Imitate connection process
-			await UniTask.WaitForSeconds(1f).AsTask(); 
-			
+			await UniTask.WaitForSeconds(1f).AsTask();
+
 			return ConnectionResult.Success;
 		}
 	}

@@ -8,7 +8,7 @@ namespace CodeBase.Services.PrefabPoolingService
 		public override void InstallBindings()
 		{
 			Container.BindFactory<GameObject, SpecificPrefabPool, SpecificPrefabPool.Factory>();
-			
+
 			Container.BindInterfacesTo<PrefabPoolingService>()
 					 .AsSingle();
 		}

@@ -27,11 +27,11 @@ namespace CodeBase.Infrastructure.States
 		public async UniTask Enter()
 		{
 			log.Log("GameHub state enter");
-			
+
 			loadingCurtain.Show();
 
 			await assetProvider.WarmupAssetsByLabel(AssetLabels.GameHubState);
-			
+
 			// Because we don't have any substates for this state now, we just load scene with game hub decorations.
 			await sceneLoader.Load(InfrastructureAssetPath.GameHubScene);
 

@@ -16,10 +16,14 @@ namespace CodeBase.Infrastructure.Observables
 	public class Observable<TValue> : IEquatable<Observable<TValue>>
 	{
 
-		TValue value;
-		
 		public Action<Observable<TValue>, TValue, TValue> OnChanged;
-		
+
+		TValue value;
+
+		public Observable() { }
+
+		public Observable(TValue value) => this.value = value;
+
 		public TValue Value {
 			get => value;
 			set {
@@ -28,10 +32,6 @@ namespace CodeBase.Infrastructure.Observables
 				OnChanged?.Invoke(this, oldValue, value);
 			}
 		}
-
-		public Observable() { }
-
-		public Observable(TValue value) => this.value = value;
 
 		public bool Equals(Observable<TValue> other) => other.value.Equals(value);
 

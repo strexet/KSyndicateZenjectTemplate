@@ -5,6 +5,7 @@ namespace CodeBase.Infrastructure
 {
 	public class GameRunner : MonoBehaviour
 	{
+
 		GameBootstrapper.Factory gameBootstrapperFactory;
 
 		[Inject]

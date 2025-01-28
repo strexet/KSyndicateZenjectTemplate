@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 namespace CodeBase.Gameplay.States
 {
 	/// <summary>
-	/// You can use states like this for showing starting cut scenes, objectives on the level, explaining game rules and so on.
+	///     You can use states like this for showing starting cut scenes, objectives on the level, explaining game rules and so on.
 	/// </summary>
 	public class StartGameplayState : IState
 	{

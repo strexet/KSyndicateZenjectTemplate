@@ -7,13 +7,13 @@ using Zenject;
 namespace CodeBase.UI.Services.Factories
 {
 	/// <summary>
-	/// Bind ui factories here
+	///     Bind ui factories here
 	/// </summary>
 	public class UIFactoryInstaller : Installer<UIFactoryInstaller>
 	{
 		public override void InstallBindings()
 		{
-			
+
 			Container.Bind<IUIFactory>().To<UIFactory>()
 					 .AsSingle();
 

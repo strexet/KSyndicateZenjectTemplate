@@ -28,10 +28,10 @@ namespace CodeBase.Infrastructure.States
 		{
 			log.Log("Game mode 1 state enter");
 			loadingCurtain.Show();
-			
+
 			await assetProvider.WarmupAssetsByLabel(AssetLabels.GameplayState);
 			await sceneLoader.Load(InfrastructureAssetPath.GameMode1Scene);
-			
+
 			loadingCurtain.Hide();
 		}
 
