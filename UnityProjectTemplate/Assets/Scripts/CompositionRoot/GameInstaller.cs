@@ -126,6 +126,5 @@ namespace Game.CompositionRoot
 
 		void BindAdsService() => Container.Bind<AdsService>()
 										  .AsSingle();
-
 	}
 }
