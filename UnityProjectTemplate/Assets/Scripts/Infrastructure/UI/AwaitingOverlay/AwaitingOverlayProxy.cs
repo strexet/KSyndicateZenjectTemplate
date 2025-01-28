@@ -7,8 +7,7 @@ namespace Game.Infrastructure.UI.AwaitingOverlay
 		readonly AwaitingOverlay.Factory factory;
 		IAwaitingOverlay impl;
 
-		public AwaitingOverlayProxy(AwaitingOverlay.Factory factory) =>
-			this.factory = factory;
+		public AwaitingOverlayProxy(AwaitingOverlay.Factory factory) => this.factory = factory;
 
 		public void Show(string withMessage) => impl.Show(withMessage);
 

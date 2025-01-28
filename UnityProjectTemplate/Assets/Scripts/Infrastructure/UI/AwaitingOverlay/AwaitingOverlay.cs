@@ -8,15 +8,15 @@ namespace Game.Infrastructure.UI.AwaitingOverlay
 {
 	public class AwaitingOverlay : MonoBehaviour, IAwaitingOverlay
 	{
-		[SerializeField]
-		TextMeshProUGUI message;
-		[SerializeField]
-		Canvas canvas;
+		[SerializeField] TextMeshProUGUI message;
+		[SerializeField] Canvas canvas;
 
 		ILocalizationService localizationService;
 
-		void Awake() =>
-			Hide();
+		[Inject]
+		public void Construct(ILocalizationService localizationService) => this.localizationService = localizationService;
+
+		void Awake() => Hide();
 
 		public void Show(string withMessage)
 		{
@@ -25,10 +25,6 @@ namespace Game.Infrastructure.UI.AwaitingOverlay
 		}
 
 		public void Hide() => canvas.enabled = false;
-
-		[Inject]
-		public void Construct(ILocalizationService localizationService) =>
-			this.localizationService = localizationService;
 
 		public class Factory : PlaceholderFactory<string, UniTask<AwaitingOverlay>> { }
 	}
