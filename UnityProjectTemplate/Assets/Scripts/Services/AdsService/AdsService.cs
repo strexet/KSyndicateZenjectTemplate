@@ -5,7 +5,6 @@ namespace Game.Services.AdsService
 {
 	public class AdsService
 	{
-
 		readonly ILogService log;
 
 		public AdsService(ILogService log) => this.log = log;
@@ -16,7 +15,7 @@ namespace Game.Services.AdsService
 
 		public void Initialize()
 		{
-			log.LogWarning("´Initialization of ads service isn't implemented yet");
+			log.LogWarning("Initialization of ads service isn't implemented yet");
 		}
 
 		public void ShowRewardedVideo(Action onVideoFinished)
