@@ -7,10 +7,10 @@ namespace Game.Infrastructure.AssetManagement
 	public class PrefabFactoryAsync<TComponent> : IFactory<string, UniTask<TComponent>>
 	{
 		readonly IInstantiator instantiator;
-		readonly IAssetProvider assetProvider;
+		readonly AssetProvider assetProvider;
 
 		public PrefabFactoryAsync(IInstantiator instantiator,
-			IAssetProvider assetProvider)
+			AssetProvider assetProvider)
 		{
 			this.instantiator = instantiator;
 			this.assetProvider = assetProvider;

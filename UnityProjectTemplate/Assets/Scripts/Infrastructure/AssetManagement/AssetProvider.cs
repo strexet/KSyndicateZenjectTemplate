@@ -6,7 +6,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Game.Infrastructure.AssetManagement
 {
-	public class AssetProvider : IAssetProvider
+	public class AssetProvider
 	{
 		readonly Dictionary<string, AsyncOperationHandle> assetRequests = new();
 

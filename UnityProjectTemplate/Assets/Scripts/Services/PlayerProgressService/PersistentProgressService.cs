@@ -1,6 +1,6 @@
 ﻿namespace Game.Services.PlayerProgressService
 {
-	public class PersistentProgressService : IPersistentProgressService
+	public class PersistentProgressService
 	{
 		public Data.PlayerProgress Progress { get; set; }
 	}

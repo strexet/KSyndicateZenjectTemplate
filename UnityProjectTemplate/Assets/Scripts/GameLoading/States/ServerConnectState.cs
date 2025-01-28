@@ -10,15 +10,15 @@ namespace Game.GameLoading.States
 {
 	public class ServerConnectState : IState
 	{
-		readonly IServerConnectionService serverConnectionService;
-		readonly IStaticDataService staticDataService;
+		readonly ServerConnectionService serverConnectionService;
+		readonly StaticDataService staticDataService;
 		readonly SceneStateMachine sceneStateMachine;
 		readonly IAwaitingOverlay awaitingOverlay;
 		readonly IPopUpService popUpService;
 		readonly ILogService log;
 
-		public ServerConnectState(IServerConnectionService serverConnectionService,
-			IStaticDataService staticDataService,
+		public ServerConnectState(ServerConnectionService serverConnectionService,
+			StaticDataService staticDataService,
 			SceneStateMachine sceneStateMachine,
 			IAwaitingOverlay awaitingOverlay,
 			IPopUpService popUpService,

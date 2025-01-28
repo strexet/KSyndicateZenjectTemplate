@@ -10,14 +10,14 @@ namespace Game.Services.StaticDataService
 {
 	// This service incapsulate logic of uploading configs and give convenient API
 	// for all consumers to receive necessary configs
-	public class StaticDataService : IStaticDataService
+	public class StaticDataService
 	{
 
 		readonly ILogService log;
-		readonly IAssetProvider assetProvider;
+		readonly AssetProvider assetProvider;
 		Dictionary<int, PolicyAcceptPopupConfig> policyAcceptConfigs;
 
-		public StaticDataService(ILogService log, IAssetProvider assetProvider)
+		public StaticDataService(ILogService log, AssetProvider assetProvider)
 		{
 			this.log = log;
 			this.assetProvider = assetProvider;

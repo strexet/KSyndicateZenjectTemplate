@@ -13,15 +13,15 @@ namespace Game.GameLoading.States
 	public class LoadPlayerProgressState : IState
 	{
 		readonly SceneStateMachine sceneStateMachine;
-		readonly ISaveLoadService saveLoadService;
+		readonly SaveLoadService saveLoadService;
 		readonly IEnumerable<IProgressReader> progressReaderServices;
-		readonly IPersistentProgressService progressService;
+		readonly PersistentProgressService progressService;
 		readonly IAwaitingOverlay awaitingOverlay;
 		readonly ILogService log;
 
 		public LoadPlayerProgressState(SceneStateMachine sceneStateMachine,
-			IPersistentProgressService progressService,
-			ISaveLoadService saveLoadService,
+			PersistentProgressService progressService,
+			SaveLoadService saveLoadService,
 			IEnumerable<IProgressReader> progressReaderServices,
 			IAwaitingOverlay awaitingOverlay,
 			ILogService log)

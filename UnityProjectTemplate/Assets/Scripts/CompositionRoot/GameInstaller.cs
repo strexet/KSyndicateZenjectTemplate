@@ -25,6 +25,9 @@ namespace Game.CompositionRoot
 	{
 		public override void InstallBindings()
 		{
+			BindLogService();
+			BindInputService();
+
 			BindGameBootstraperFactory();
 			BindCoroutineRunner();
 			BindRandomizeService();
@@ -32,7 +35,6 @@ namespace Game.CompositionRoot
 			BindGameFactory();
 			BindStaticDataService();
 			BindAssetProvider();
-			BindInputService();
 
 			BindSceneLoader();
 			BindServerConnectionService();
@@ -45,58 +47,49 @@ namespace Game.CompositionRoot
 
 			BindAnalyticsService();
 			BindAdsService();
-			BindLogService();
 		}
 
-		void BindGameBootstraperFactory() => Container
-											.BindFactory<GameBootstrapper, GameBootstrapper.Factory>()
-											.FromComponentInNewPrefabResource(InfrastructureAssetPath.GameBootstraper);
+		void BindLogService() => Container.BindInterfacesTo<LogService>()
+										  .AsSingle();
 
-		void BindCoroutineRunner() => Container
-									 .Bind<ICoroutineRunner>()
-									 .To<CoroutineRunner>()
-									 .FromComponentInNewPrefabResource(InfrastructureAssetPath.CoroutineRunnerPath)
-									 .AsSingle();
+		void BindInputService() => Container.BindInterfacesAndSelfTo<InputService>()
+											.AsSingle();
 
-		void BindRandomizeService() => Container
-									  .BindInterfacesAndSelfTo<RandomizerService>()
-									  .AsSingle();
+		void BindGameBootstraperFactory() => Container.BindFactory<GameBootstrapper, GameBootstrapper.Factory>()
+													  .FromComponentInNewPrefabResource(InfrastructureAssetPath.GameBootstraper);
+
+		void BindCoroutineRunner() => Container.Bind<ICoroutineRunner>()
+											   .To<CoroutineRunner>()
+											   .FromComponentInNewPrefabResource(InfrastructureAssetPath.CoroutineRunnerPath)
+											   .AsSingle();
+
+		void BindRandomizeService() => Container.Bind<RandomizerService>()
+												.AsSingle();
 
 		void BindGameStateMachine() => GameStateMachineInstaller.Install(Container);
 
-		void BindGameFactory() => Container
-								 .Bind<IGameFactory>()
-								 .FromSubContainerResolve()
-								 .ByInstaller<GameFactoryInstaller>()
-								 .AsSingle();
-
-		void BindStaticDataService() => Container
-									   .BindInterfacesAndSelfTo<StaticDataService>()
-									   .AsSingle();
-
-		void BindAssetProvider() => Container
-								   .BindInterfacesTo<AssetProvider>()
-								   .AsSingle();
-
-		void BindInputService() => Container
-								  .BindInterfacesAndSelfTo<InputService>()
-								  .AsSingle();
-
-		void BindSceneLoader() => Container
-								 .BindInterfacesAndSelfTo<SceneLoader>()
-								 .AsSingle();
-
-		void BindServerConnectionService() => Container
-											 .BindInterfacesTo<ServerConnectionService>()
-											 .AsSingle();
-
-		void BindPlayerProgressService() => Container
-										   .BindInterfacesAndSelfTo<PersistentProgressService>()
+		void BindGameFactory() => Container.Bind<GameFactory>()
+										   .FromSubContainerResolve()
+										   .ByInstaller<GameFactoryInstaller>()
 										   .AsSingle();
 
-		void BindSaveLoadService() => Container
-									 .BindInterfacesAndSelfTo<SaveLoadService>()
-									 .AsSingle();
+		void BindStaticDataService() => Container.Bind<StaticDataService>()
+												 .AsSingle();
+
+		void BindAssetProvider() => Container.Bind<AssetProvider>()
+											 .AsSingle();
+
+		void BindSceneLoader() => Container.Bind<SceneLoader>()
+										   .AsSingle();
+
+		void BindServerConnectionService() => Container.Bind<ServerConnectionService>()
+													   .AsSingle();
+
+		void BindPlayerProgressService() => Container.Bind<PersistentProgressService>()
+													 .AsSingle();
+
+		void BindSaveLoadService() => Container.Bind<SaveLoadService>()
+											   .AsSingle();
 
 		void BindInfrastructureUI()
 		{
@@ -122,24 +115,17 @@ namespace Game.CompositionRoot
 					 .AsSingle();
 		}
 
-		void BindWalletService() => Container
-								   .BindInterfacesAndSelfTo<WalletService>()
-								   .AsSingle();
+		void BindWalletService() => Container.Bind<WalletService>()
+											 .AsSingle();
 
-		void BindLocalizationService() => Container
-										 .BindInterfacesTo<LocalizationService>()
-										 .AsSingle();
+		void BindLocalizationService() => Container.Bind<LocalizationService>()
+												   .AsSingle();
 
-		void BindAnalyticsService() => Container
-									  .BindInterfacesTo<AnalyticsService>()
-									  .AsSingle();
+		void BindAnalyticsService() => Container.Bind<AnalyticsService>()
+												.AsSingle();
 
-		void BindAdsService() => Container
-								.BindInterfacesAndSelfTo<AdsService>()
-								.AsSingle();
+		void BindAdsService() => Container.Bind<AdsService>()
+										  .AsSingle();
 
-		void BindLogService() => Container
-								.BindInterfacesTo<LogService>()
-								.AsSingle();
 	}
 }

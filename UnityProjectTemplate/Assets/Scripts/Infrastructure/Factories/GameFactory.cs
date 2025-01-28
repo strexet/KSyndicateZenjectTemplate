@@ -2,13 +2,13 @@
 
 namespace Game.Infrastructure.Factories
 {
-	public class GameFactory : IGameFactory
+	public class GameFactory
 	{
 		readonly HUDRoot.Factory hudFactory;
 
 		public GameFactory(HUDRoot.Factory hudFactory) => this.hudFactory = hudFactory;
 
-		public IHUDRoot CreateHUD() => hudFactory.Create();
+		public HUDRoot CreateHUD() => hudFactory.Create();
 
 		public void Cleanup() { }
 	}

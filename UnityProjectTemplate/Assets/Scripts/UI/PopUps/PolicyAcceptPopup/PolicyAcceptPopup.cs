@@ -16,11 +16,11 @@ namespace Game.UI.PopUps.PolicyAcceptPopup
 		[SerializeField] TextMeshProUGUI agreeText;
 		[SerializeField] TextMeshProUGUI buttonText;
 
-		ILocalizationService localizationService;
+		LocalizationService localizationService;
 		ILogService log;
 
 		[Inject]
-		public void Construct(ILocalizationService localizationService, ILogService log)
+		public void Construct(LocalizationService localizationService, ILogService log)
 		{
 			this.localizationService = localizationService;
 			this.log = log;

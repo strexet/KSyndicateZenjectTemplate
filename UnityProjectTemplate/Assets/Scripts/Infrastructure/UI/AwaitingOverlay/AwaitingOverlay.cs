@@ -11,10 +11,10 @@ namespace Game.Infrastructure.UI.AwaitingOverlay
 		[SerializeField] TextMeshProUGUI message;
 		[SerializeField] Canvas canvas;
 
-		ILocalizationService localizationService;
+		LocalizationService localizationService;
 
 		[Inject]
-		public void Construct(ILocalizationService localizationService) => this.localizationService = localizationService;
+		public void Construct(LocalizationService localizationService) => this.localizationService = localizationService;
 
 		void Awake() => Hide();
 

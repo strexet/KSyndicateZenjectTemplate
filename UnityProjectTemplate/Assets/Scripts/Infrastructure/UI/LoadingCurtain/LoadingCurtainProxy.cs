@@ -14,7 +14,6 @@ namespace Game.Infrastructure.UI.LoadingCurtain
 
 		public void Hide() => impl.Hide();
 
-		public async UniTask InitializeAsync() =>
-			impl = await factory.Create(InfrastructureAssetPath.CurtainPath);
+		public async UniTask InitializeAsync() => impl = await factory.Create(InfrastructureAssetPath.CurtainPath);
 	}
 }

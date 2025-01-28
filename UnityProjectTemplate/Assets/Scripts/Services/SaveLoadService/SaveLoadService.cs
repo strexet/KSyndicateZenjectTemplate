@@ -7,14 +7,14 @@ namespace Game.Services.SaveLoadService
 {
 	// This service implement saving and loading of progress.
 	// There are for example it implemented by PlayerPrefs but you can implement you own variant of service.
-	public class SaveLoadService : ISaveLoadService
+	public class SaveLoadService
 	{
 		const string ProgressKey = "Progress";
 
 		readonly IEnumerable<IProgressSaver> saverServices;
-		readonly IPersistentProgressService persistentProgressService;
+		readonly PersistentProgressService persistentProgressService;
 
-		public SaveLoadService(IEnumerable<IProgressSaver> saverServices, IPersistentProgressService persistentProgressService)
+		public SaveLoadService(IEnumerable<IProgressSaver> saverServices, PersistentProgressService persistentProgressService)
 		{
 			this.saverServices = saverServices;
 			this.persistentProgressService = persistentProgressService;

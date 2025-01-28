@@ -13,7 +13,7 @@ namespace Game.Infrastructure.Factories
 			Container.BindFactory<HUDRoot, HUDRoot.Factory>()
 					 .FromComponentInNewPrefabResource(InfrastructureAssetPath.HUDRoot);
 
-			Container.Bind<IGameFactory>()
+			Container.Bind<GameFactory>()
 					 .To<GameFactory>()
 					 .AsSingle();
 		}

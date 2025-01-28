@@ -13,14 +13,14 @@ namespace Game.GameLoading.States
 	{
 		readonly IPopUpService popUpService;
 		readonly SceneStateMachine sceneStateMachine;
-		readonly IPersistentProgressService progressService;
+		readonly PersistentProgressService progressService;
 		readonly ILogService log;
-		readonly IStaticDataService staticDataService;
+		readonly StaticDataService staticDataService;
 
 		public GDPRState(IPopUpService popUpService,
-			IStaticDataService staticDataService,
+			StaticDataService staticDataService,
 			SceneStateMachine sceneStateMachine,
-			IPersistentProgressService progressService,
+			PersistentProgressService progressService,
 			ILogService log)
 		{
 			this.popUpService = popUpService;

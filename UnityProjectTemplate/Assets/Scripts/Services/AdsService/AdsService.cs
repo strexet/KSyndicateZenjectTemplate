@@ -3,7 +3,7 @@ using System;
 
 namespace Game.Services.AdsService
 {
-	public class AdsService : IAdsService
+	public class AdsService
 	{
 
 		readonly ILogService log;

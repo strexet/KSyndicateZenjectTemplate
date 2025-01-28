@@ -10,12 +10,12 @@ namespace Game.UI.Windows
 	{
 		[SerializeField] protected Button CloseButton;
 
-		protected IPersistentProgressService ProgressService;
+		protected PersistentProgressService ProgressService;
 
 		protected PlayerProgress Progress => ProgressService.Progress;
 
 		[Inject]
-		public void Construct(IPersistentProgressService progressService) =>
+		public void Construct(PersistentProgressService progressService) =>
 			ProgressService = progressService;
 
 		void Awake() => OnAwake();

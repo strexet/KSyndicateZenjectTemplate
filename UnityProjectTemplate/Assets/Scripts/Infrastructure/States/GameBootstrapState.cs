@@ -12,19 +12,19 @@ namespace Game.Infrastructure.States
 	public class GameBootstrapState : IState
 	{
 		readonly GameStateMachine gameStateMachine;
-		readonly IAdsService adsService;
-		readonly IStaticDataService staticDataService;
-		readonly IAnalyticsService analyticsService;
+		readonly AdsService adsService;
+		readonly StaticDataService staticDataService;
+		readonly AnalyticsService analyticsService;
 		readonly ILogService log;
 		readonly LoadingCurtainProxy loadingCurtainProxy;
 		readonly AwaitingOverlayProxy awaitingOverlayProxy;
-		readonly IAssetProvider assetProvider;
+		readonly AssetProvider assetProvider;
 
 		public GameBootstrapState(GameStateMachine gameStateMachine,
-			IAdsService adsService,
-			IStaticDataService staticDataService,
-			IAnalyticsService analyticsService,
-			IAssetProvider assetProvider,
+			AdsService adsService,
+			StaticDataService staticDataService,
+			AnalyticsService analyticsService,
+			AssetProvider assetProvider,
 			ILogService log,
 			LoadingCurtainProxy loadingCurtainProxy,
 			AwaitingOverlayProxy awaitingOverlayProxy)

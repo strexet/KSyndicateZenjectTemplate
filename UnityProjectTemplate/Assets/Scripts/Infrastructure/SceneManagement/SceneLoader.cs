@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace Game.Infrastructure.SceneManagement
 {
-	public class SceneLoader : ISceneLoader
+	public class SceneLoader
 	{
 		readonly ILogService log;
 

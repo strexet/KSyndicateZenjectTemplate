@@ -8,7 +8,7 @@ using Zenject;
 
 namespace Game.Services.WalletService
 {
-	public class WalletService : IWalletService, IProgressReader, IProgressSaver, IInitializable
+	public class WalletService : IProgressReader, IProgressSaver, IInitializable
 	{
 		readonly Dictionary<int, long> wallets = new();
 

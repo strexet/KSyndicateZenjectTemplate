@@ -13,14 +13,14 @@ namespace Game.GameLoading.States
 	{
 		readonly IPopUpService popUpService;
 		readonly SceneStateMachine sceneStateMachine;
-		readonly IPersistentProgressService progressService;
+		readonly PersistentProgressService progressService;
 		readonly ILogService log;
-		readonly IStaticDataService staticData;
+		readonly StaticDataService staticData;
 
 		public PrivatePolicyState(IPopUpService popUpService,
-			IStaticDataService staticData,
+			StaticDataService staticData,
 			SceneStateMachine sceneStateMachine,
-			IPersistentProgressService progressService,
+			PersistentProgressService progressService,
 			ILogService log)
 		{
 			this.popUpService = popUpService;

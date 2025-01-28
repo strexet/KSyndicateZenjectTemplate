@@ -9,14 +9,14 @@ namespace Game.Infrastructure.States
 	public class GameplayState : IState
 	{
 		readonly ILoadingCurtain loadingCurtain;
-		readonly ISceneLoader sceneLoader;
+		readonly SceneLoader sceneLoader;
 		readonly ILogService log;
-		readonly IAssetProvider assetProvider;
+		readonly AssetProvider assetProvider;
 
 		public GameplayState(ILoadingCurtain loadingCurtain,
-			ISceneLoader sceneLoader,
+			SceneLoader sceneLoader,
 			ILogService log,
-			IAssetProvider assetProvider)
+			AssetProvider assetProvider)
 		{
 			this.loadingCurtain = loadingCurtain;
 			this.sceneLoader = sceneLoader;

@@ -8,12 +8,12 @@ namespace Game.Infrastructure.States
 	public class GameLoadingState : IState
 	{
 		readonly ILoadingCurtain loadingCurtain;
-		readonly ISceneLoader sceneLoader;
-		readonly IAssetProvider assetProvider;
+		readonly SceneLoader sceneLoader;
+		readonly AssetProvider assetProvider;
 
 		public GameLoadingState(ILoadingCurtain loadingCurtain,
-			ISceneLoader sceneLoader,
-			IAssetProvider assetProvider)
+			SceneLoader sceneLoader,
+			AssetProvider assetProvider)
 		{
 			this.loadingCurtain = loadingCurtain;
 			this.sceneLoader = sceneLoader;

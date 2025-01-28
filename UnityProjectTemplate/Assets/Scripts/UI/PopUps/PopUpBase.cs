@@ -10,14 +10,14 @@ namespace Game.UI.PopUps
 	{
 		[SerializeField] Canvas popupCanvas;
 
-		protected IPersistentProgressService ProgressService;
+		protected PersistentProgressService ProgressService;
 
 		UniTaskCompletionSource<TResult> taskCompletionSource;
 
 		protected PlayerProgress Progress => ProgressService.Progress;
 
 		[Inject]
-		public void Construct(IPersistentProgressService progressService) => ProgressService = progressService;
+		public void Construct(PersistentProgressService progressService) => ProgressService = progressService;
 
 		void Awake() => OnAwake();
 

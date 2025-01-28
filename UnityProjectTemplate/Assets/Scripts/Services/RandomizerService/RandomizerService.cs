@@ -2,7 +2,7 @@
 
 namespace Game.Services.RandomizerService
 {
-	public class RandomizerService : IRandomizerService
+	public class RandomizerService
 	{
 		readonly System.Collections.Generic.Stack<float> NormalValues = new();
 

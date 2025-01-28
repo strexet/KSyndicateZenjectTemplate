@@ -14,9 +14,9 @@ namespace Game.UI.PopUps.ErrorPopup
 		[SerializeField] TextMeshProUGUI buttonText;
 		[SerializeField] Button button;
 
-		ILocalizationService localizationService;
+		LocalizationService localizationService;
 
-		public void Construct(ILocalizationService localizationService) => this.localizationService = localizationService;
+		public void Construct(LocalizationService localizationService) => this.localizationService = localizationService;
 
 		override protected void Initialize(ErrorPopupConfig with)
 		{
